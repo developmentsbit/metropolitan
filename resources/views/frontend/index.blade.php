@@ -167,16 +167,23 @@ right:0;
         .site-lang a img{
           width: 26px;
         }
+
+        .siteNameEst {
+            margin-top: -77px !important;
+            padding-left: 114px;
+            font-weight: bold;
+            font-size: 14px !important;
+        }
+        .siteNameEst span:first-child{
+            font-size: 17px !important;
+        }
       }
 
 .btn-success {
     background : #05c76a
 
 }
-.logoName {
-    position: absolute;
-    z-index: 2;
-}
+
 
 .logoName span{
     color: white;
@@ -184,27 +191,24 @@ right:0;
 
 .logoName img {
     max-width : 80px;
-    border-radius : 5px ;
+    border-radius : 5px;
 }
 .siteNameEst {
-    margin-top: 29px;
-    padding-left: 12px;
+    margin-top: -77px;
     font-weight: bold;
     font-size: 19px;
+    padding: 0px 0px 0px 115px;
 }
 
 .siteNameEst span:first-child{
     font-size: 25px;
 }
 
-.siteNameEst span {
-    text-shadow: -1px -1px 10px #000, 1px -1px 10px #000, -1px 1px 10px #000, 1px 1px 10px #000;
-}
-
-.logoName.d-flex {
-    margin-top: 55px;
-    margin-left: 18px;
-    transition: .3s;
+.siteLogo img{
+  height: 100px;
+  width : 100px;
+  padding: 7px;
+  border-radius: 12%;
 }
 </style>
 
@@ -297,22 +301,29 @@ right:0;
         </div>
       </div><!------------Top Header End---------------->
 
-      <div class="logo-sm-header">
-          <div class="logoName d-flex">
-              <div class="siteLogo">
-                  <a href="{{ url('/') }}"><img src="{{ asset($setting->image) }}" class="img-fluid" style="height: 100px;width : 100px;"></a>
-                </div>
-                <div class="siteNameEst">
-                    <span>@if($lang == 'en'){{ $setting->name }}@else {{$setting->name_bangla}} @endif</span>
-                    <br>
-                    <span id="" style="">
-                    @lang('frontend.established') - @if($lang == 'en'){{ $setting->established }}@else {{$setting->established_bangla}} খ্রিঃ@endif </span>
-                </div>
-            </div>
+      <div class="col-sm-12 col-12  tophead">
+      <div class="row">
+        
+        <div class="col-sm-6 col-12">
+          <div class="siteLogo">
+            <a href="{{ url('/') }}"><img src="{{ asset($setting->image) }}" class="img-fluid"></a>
+          </div>
+          <div class="siteNameEst">
+              <span>@if($lang == 'en'){{ $setting->name }}@else {{$setting->name_bangla}} @endif</span>
+              <br>
+              <span id="" style="">
+              @lang('frontend.established') - @if($lang == 'en'){{ $setting->established }}@else {{$setting->established_bangla}} খ্রিঃ@endif </span>
+          </div>
         </div>
 
 
+        <div class="col-sm-8 col-12 text-center text-sm-center text-lg-right" id="email">
+          <div class="btn-group" role="group" aria-label="Basic example">
+          </div>
+        </div>
 
+        </div>
+      </div><!------------Top Header End---------------->
 
 
       <div class="col-sm-12 col-12 p-0">

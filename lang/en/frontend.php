@@ -76,6 +76,7 @@ $array = array(
     'citizen_charter'=>'Citizen Charter',
     'administrative_information'=>'Administrative Info',
     'presidentmessage'=>'President Message',
+    'vicepresidentmessage'=>'Vice President Message',
     'principal_message'=>'Principal Message',
     'principal_messages'=>'Head Teacher Message',
     'vice_principal_message'=>'Vice Principal Message',

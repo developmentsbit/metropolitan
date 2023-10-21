@@ -43,6 +43,21 @@ html{
   color: #f1f1f1;
 }
 
+.tophead{
+  background: #755783;
+  color: #fff;
+  border-top: 1px solid #fff;
+  height: 100px;
+}
+
+.tophead a{
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  border-radius: 30px;
+  color: #f1f1f1;
+}
+
 #searchbox{
   background:#fff; 
   height: 30px; 
