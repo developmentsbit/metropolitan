@@ -80,7 +80,8 @@ $array = array(
     'history'=>'ইতিহাস',
     'citizen_charter'=>'সিটিজেন চার্টার',
     'administrative_information'=>'প্রশাসনিক তথ্য',
-    'presidentmessage'=>'সভাপতির বার্তা',
+    'presidentmessage'=>'চেয়ারম্যানের বার্তা',
+    'vicepresidentmessage'=>'ভাইস চেয়ারম্যানের বার্তা',
 
     // 'principal_messages'=>'প্রধান শিক্ষকের বার্তা',
     'vice_principal_message'=>'উপাধ্যক্ষের বার্তা',

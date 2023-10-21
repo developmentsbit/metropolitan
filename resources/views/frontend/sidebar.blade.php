@@ -18,7 +18,6 @@
 
     @if($president_check > 0)
 	@if(request()->Is('presidentmessage'))
-	@if($setting->type == 'school' || $setting->type == 'madrasah')
 	@else
 	<div class="col-sm-12 col-12 p-0 mt-2">
 		<ul class="list-group">
@@ -36,7 +35,6 @@
 		</li>
 	</div>
 	@endif
-	@endif
     @endif
 
 
@@ -47,11 +45,7 @@
 	<div class="col-sm-12 col-12 p-0 mt-2">
 		<ul class="list-group">
 			<li class="list-group-item" id="featureheads">
-				@if($setting->type == 'school')
 				@lang('frontend.principal_message')
-				@else
-				@lang('frontend.principal_message')
-				@endif
 			</li>
 		</ul>
 		<li class="list-group-item p-0 pt-2" id="padd">
@@ -67,7 +61,7 @@
 	</div>
     @endif
 
-    @if($setting->type == 'college' || $setting->type == 'madrasah')
+    
 
 	@if(request()->Is('vice_principal_messages'))
 
@@ -87,7 +81,7 @@
 			</center>
 		</li>
 	</div>
-    @endif
+    
 
 	@endif
 
