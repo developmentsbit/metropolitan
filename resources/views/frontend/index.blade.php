@@ -311,14 +311,30 @@ right:0;
           <div class="siteNameEst">
               <span>@if($lang == 'en'){{ $setting->name }}@else {{$setting->name_bangla}} @endif</span>
               <br>
-              <span id="" style="">
+              <span>
               @lang('frontend.established') - @if($lang == 'en'){{ $setting->established }}@else {{$setting->established_bangla}} খ্রিঃ@endif </span>
           </div>
         </div>
 
 
-        <div class="col-sm-8 col-12 text-center text-sm-center text-lg-right" id="email">
-          <div class="btn-group" role="group" aria-label="Basic example">
+        <div class="col-sm-2 col-12 text-center text-sm-center text-lg-right mt-4">
+          <div>
+            <p class="fa fa-id-card">EIIN Number</p>
+            <span>010203</span>
+          </div>
+        </div>
+
+        <div class="col-sm-2 col-12 text-center text-sm-center text-lg-right mt-4">
+          <div>
+            <p>EIIN Number</p>
+            <span>010203</span>
+          </div>
+        </div>
+        
+        <div class="col-sm-2 col-12 text-center text-sm-center text-lg-right mt-4">
+          <div>
+            <p>EIIN Number</p>
+            <span>010203</span>
           </div>
         </div>
 

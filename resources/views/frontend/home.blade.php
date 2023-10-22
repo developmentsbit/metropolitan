@@ -294,38 +294,15 @@ $setting = DB::table("setting")->first();
 						</div><!-------------------------End Card----------------------->
 
 
-
-
-
-
-
 						@php
 						$setting = DB::table("setting")->first();
 						@endphp
-
-
-
-						{{--
-							<div class="col-12 mt-4">
-							<iframe width="100%" height="400" src="https://www.youtube.com/embed/ZZpp4WMokZ0" title="FENI GOVERNMENT COLLEGE Documentary." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						
+						<div class="col-12 mt-4">
+							<iframe width="100%" height="400" src="{{ $setting->youtube }}" title="METROPOLITAN SCHOOL & COLLEGE Documentary." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 						</div>
-						--}}
-
-
-
-
-
-
 
 						<!-------------------------------------End Full Card---------------------------------->
-
-
-
-
-
-
-
-
 					</div>
 				</div>
 			</div><!-----------------------End Mainpage---------------------->
