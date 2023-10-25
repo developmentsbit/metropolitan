@@ -44,8 +44,8 @@ html{
 }
 
 .tophead{
-  background: #6d2c8c;
-  color: #fff;
+  background: transparent;
+  color: #000000;
   border-top: 1px solid #fff;
   height: 100px;
 }
@@ -941,8 +941,45 @@ html{
 
 }*/
 
+i.fa.fa-id-card {
+  position: absolute;
+  padding: 0px;
+  margin-top: -50px;
+  margin-left: -71%;
+  font-size: 25px;
+}
 
+i.fa.fa-phone-square {
+  position: absolute;
+  padding: 0px;
+  margin-top: -44px;
+  margin-left: -223px;
+  font-size: 25px;
+}
 
+.eiin h5{
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 0px 15px 0px 4px;
+}
+
+.eiin h6{
+  font-size: 14px;
+  padding: 2px 106px 8px 0px;
+  font-weight: bold;
+}
+
+.phone h5{
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 0px 10px 0px 4px;
+}
+
+.phone h6{
+  font-size: 15px;
+  padding: 2px 57px 4px 0px;
+  font-weight: bold;
+}
 .complainform label{
   font-size: 14px;
 }
