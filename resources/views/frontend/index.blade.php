@@ -317,24 +317,19 @@ right:0;
         </div>
 
 
-        <div class="col-sm-2 col-12 text-center text-sm-center text-lg-right mt-4">
-          <div>
-            <p class="fa fa-id-card">EIIN Number</p>
-            <span>010203</span>
+        <div class="col-sm-3 col-12 text-center text-sm-center text-lg-right mt-4">
+          <div class="eiin">
+            <h5>College EIIN Number</h5>
+            <h6>010101</h6>
+            <i class="fa fa-id-card"></i>
           </div>
         </div>
 
-        <div class="col-sm-2 col-12 text-center text-sm-center text-lg-right mt-4">
-          <div>
-            <p>EIIN Number</p>
-            <span>010203</span>
-          </div>
-        </div>
-        
-        <div class="col-sm-2 col-12 text-center text-sm-center text-lg-right mt-4">
-          <div>
-            <p>EIIN Number</p>
-            <span>010203</span>
+        <div class="col-sm-3 col-12 text-center text-sm-center text-lg-right mt-4">
+          <div class="phone">
+            <h5>Call Us For More Details</h5>
+            <h6>+880 1720 557188</h6>
+            <i class="fa fa-phone-square"></i>
           </div>
         </div>
 
