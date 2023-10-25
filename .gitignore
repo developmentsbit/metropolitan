@@ -49,6 +49,8 @@ public/profile_images
 public/setting_image
 public/vice_principal_image
 
+ems/admin/all_image
+
 # result/db_connect/conect.php
 
 # Laravel 5 & Lumen specific with changed public path
