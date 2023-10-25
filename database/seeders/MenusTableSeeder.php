@@ -211,7 +211,7 @@ class MenusTableSeeder extends Seeder
             ),
             10 => 
             array (
-                'bn_name' => 'অধ্যক্ষ/সভাপতি/প্রধান শিক্ষক',
+                'bn_name' => 'চেয়ারম্যান এবং অধ্যক্ষের  বার্তা',
                 'created_at' => '2023-06-11 13:38:49',
                 'created_by' => 1,
                 'deleted_at' => NULL,
@@ -219,13 +219,13 @@ class MenusTableSeeder extends Seeder
                 'icon' => NULL,
                 'id' => 30,
                 'is_hidden' => 'No',
-                'name' => 'Principal/President/Head Teacher',
+                'name' => 'President & Principal Message',
                 'order_by' => 1,
                 'parent_id' => 29,
                 'route_name' => 'principle.index',
                 'status' => 1,
                 'system_name' => 'Principle',
-                'updated_at' => '2023-09-14 09:58:29',
+                'updated_at' => '2023-10-25 06:20:11',
                 'updated_by' => 1,
             ),
             11 => 
@@ -762,7 +762,7 @@ class MenusTableSeeder extends Seeder
             ),
             39 => 
             array (
-                'bn_name' => 'উপাধ্যক্ষ বার্তা',
+                'bn_name' => 'ভাইস চেয়ারম্যানের বার্তা',
                 'created_at' => '2023-07-16 05:09:11',
                 'created_by' => 1,
                 'deleted_at' => NULL,
@@ -770,13 +770,13 @@ class MenusTableSeeder extends Seeder
                 'icon' => NULL,
                 'id' => 66,
                 'is_hidden' => 'No',
-                'name' => 'Vice Principal Message',
+                'name' => 'Vice Chairman Message',
                 'order_by' => 2,
                 'parent_id' => 29,
                 'route_name' => 'vice_principal_message.index',
                 'status' => 1,
                 'system_name' => 'Vice Principal Message',
-                'updated_at' => '2023-07-16 05:09:12',
+                'updated_at' => '2023-10-25 06:18:48',
                 'updated_by' => 1,
             ),
             40 => 

@@ -318,18 +318,26 @@ right:0;
 
 
         <div class="col-sm-3 col-12 text-center text-sm-center text-lg-right mt-4">
-          <div class="eiin">
-            <h5>College EIIN Number</h5>
-            <h6>010101</h6>
+          <div class="phone d-flex">
+            <div style="padding-top : 5px;">
             <i class="fa fa-id-card"></i>
+            </div>
+            <div style="text-align:left;padding-left:10px;">
+            <h5>College EIIN Number</h5>
+            <span>010101</span>
+            </div>
           </div>
         </div>
 
         <div class="col-sm-3 col-12 text-center text-sm-center text-lg-right mt-4">
-          <div class="phone">
-            <h5>Call Us For More Details</h5>
-            <h6>+880 1720 557188</h6>
+          <div class="phone d-flex">
+            <div style="padding-top : 5px;">
             <i class="fa fa-phone-square"></i>
+            </div>
+            <div style="text-align:left;padding-left:10px;">
+            <h5>Call Us For More Details</h5>
+            <span>{{ $setting->phone }}</span>
+            </div>
           </div>
         </div>
 

@@ -941,20 +941,14 @@ html{
 
 }*/
 
-i.fa.fa-id-card {
-  position: absolute;
-  padding: 0px;
-  margin-top: -50px;
-  margin-left: -71%;
-  font-size: 25px;
+.complainform label{
+  font-size: 14px;
 }
 
-i.fa.fa-phone-square {
-  position: absolute;
-  padding: 0px;
-  margin-top: -44px;
-  margin-left: -223px;
-  font-size: 25px;
+/* second header */
+
+.eiin {
+  line-height: 8px;
 }
 
 .eiin h5{
@@ -963,23 +957,39 @@ i.fa.fa-phone-square {
   padding: 0px 15px 0px 4px;
 }
 
-.eiin h6{
+.eiin span{
   font-size: 14px;
   padding: 2px 106px 8px 0px;
   font-weight: bold;
 }
 
+i.fa.fa-id-card {
+  /* position: absolute; */
+  padding: 0px;
+  /* margin-top: -17px; */
+  /* margin-left: -71%; */
+  font-size: 25px;
+}
+
+.phone {
+  line-height: 8px;
+}
 .phone h5{
   font-size: 13px;
   text-transform: uppercase;
-  padding: 0px 10px 0px 4px;
+  margin-right: 11px;
 }
 
-.phone h6{
+.phone span{
   font-size: 15px;
   padding: 2px 57px 4px 0px;
   font-weight: bold;
 }
-.complainform label{
-  font-size: 14px;
+
+i.fa.fa-phone-square {
+  /* position: absolute; */
+  padding: 0px;
+  /* margin-top: -14px; */
+  /* margin-left: -225px; */
+  font-size: 25px;
 }

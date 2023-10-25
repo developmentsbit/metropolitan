@@ -14,54 +14,54 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
-        \DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        
 
         \DB::table('roles')->delete();
         
         \DB::table('roles')->insert(array (
             0 => 
             array (
+                'created_at' => '2023-03-19 15:34:59',
+                'deleted_at' => NULL,
+                'deleted_by' => NULL,
+                'guard_name' => 'web',
                 'id' => 1,
                 'name' => 'Super Admin',
-                'guard_name' => 'web',
                 'status' => 1,
-                'deleted_by' => NULL,
-                'created_at' => '2023-03-19 15:34:59',
                 'updated_at' => '2023-03-23 08:58:55',
-                'deleted_at' => NULL,
             ),
             1 => 
             array (
+                'created_at' => '2023-03-19 15:34:59',
+                'deleted_at' => NULL,
+                'deleted_by' => NULL,
+                'guard_name' => 'web',
                 'id' => 2,
                 'name' => 'Admin',
-                'guard_name' => 'web',
                 'status' => 1,
-                'deleted_by' => NULL,
-                'created_at' => '2023-03-19 15:34:59',
                 'updated_at' => '2023-03-23 08:58:55',
-                'deleted_at' => NULL,
             ),
             2 => 
             array (
+                'created_at' => '2023-03-30 17:49:59',
+                'deleted_at' => NULL,
+                'deleted_by' => NULL,
+                'guard_name' => 'web',
                 'id' => 3,
                 'name' => 'User',
-                'guard_name' => 'web',
                 'status' => 1,
-                'deleted_by' => NULL,
-                'created_at' => '2023-03-30 17:49:59',
                 'updated_at' => '2023-03-30 17:49:59',
-                'deleted_at' => NULL,
             ),
             3 => 
             array (
+                'created_at' => '2023-09-21 11:24:21',
+                'deleted_at' => '2023-09-21 11:25:03',
+                'deleted_by' => 1,
+                'guard_name' => 'web',
                 'id' => 4,
                 'name' => 'TTT',
-                'guard_name' => 'web',
                 'status' => 1,
-                'deleted_by' => 1,
-                'created_at' => '2023-09-21 11:24:21',
                 'updated_at' => '2023-09-21 11:25:03',
-                'deleted_at' => '2023-09-21 11:25:03',
             ),
         ));
         
