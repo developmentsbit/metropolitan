@@ -2,10 +2,10 @@
 
 return [
 
-     'managetitle' => 'Vice Principle Message',
-     'addtitle' => 'Add Vice Principle',
-     'edittitle' => 'Edit Vice Principle',
-     'viewtitle' => 'View Vice Principle',
+     'managetitle' => 'Vice President Message',
+     'addtitle' => 'Add Vice President',
+     'edittitle' => 'Edit Vice President',
+     'viewtitle' => 'View Vice President',
      'type' => 'Type',
      'name' => 'Name',
      'image' => 'Image',
