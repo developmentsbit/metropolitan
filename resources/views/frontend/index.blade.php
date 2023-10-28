@@ -323,8 +323,8 @@ right:0;
             <i class="fa fa-id-card"></i>
             </div>
             <div style="text-align:left;padding-left:10px;">
-            <h5>College EIIN Number</h5>
-            <span>010101</span>
+            <h5>@lang('setting.eiin')</h5>
+            <span>@if($lang == 'en'){{$setting->eiin ?: $setting->eiin_bangla}}@else {{$setting->eiin_bangla ?: $setting->eiin}}@endif</span>
             </div>
           </div>
         </div>
@@ -335,7 +335,7 @@ right:0;
             <i class="fa fa-phone-square"></i>
             </div>
             <div style="text-align:left;padding-left:10px;">
-            <h5>Call Us For More Details</h5>
+            <h5>@lang('setting.more_details')</h5>
             <span>{{ $setting->phone }}</span>
             </div>
           </div>
@@ -462,31 +462,19 @@ right:0;
                 @endphp
 
                 <div class="col-md-12 col-12 dmenu mt-3">
-                <li><a href="{{ url('principal_message') }}">
-                  @if($setting->type == 'school')
-                  @lang('frontend.principal_message')
-                  @else
-                  @lang('frontend.principal_message')
-                  @endif
-                 </a></li>
-                 @if($setting->type == 'madrasah')
-                 <li><a href="{{ url('presidentmessage') }}">@lang('frontend.presidentmessage') </a></li>
-                 @elseif($setting->type == 'school')
-                 <li><a href="{{ url('presidentmessage') }}">@lang('frontend.presidentmessage') </a></li>
-                 <li><a href="{{ url('managing_comitte') }}">@lang('frontend.managing_comitte')</a></li>
+                  <li><a href="{{ url('presidentmessage') }}">@lang('frontend.presidentmessage') </a></li>
+                  <li><a href="{{ url('vice_principal_messages') }}">@lang('frontend.vicepresidentmessage') </a></li>
+                <li><a href="{{ url('principal_message') }}">@lang('frontend.principal_message')</a></li>
+                 
+                 {{--<li><a href="{{ url('managing_comitte') }}">@lang('frontend.managing_comitte')</a></li>
 
                  @if($president_check)
                  <li><a href="{{ url('presidents') }}">@lang('frontend.presidents')</a></li>
                  @endif
 
                  <li><a href="{{ url('donar') }}">@lang('frontend.donar')</a></li>
-                 <li><a href="{{ url('ex_member') }}">@lang('frontend.ex_member')</a></li>
-                 @endif
-
-                 @if($setting->type == 'college' || $setting->type == 'madrasah')
-                 <li><a href="{{ url('vice_principal_messages') }}">@lang('frontend.vice_principal_message') </a></li>
+                 <li><a href="{{ url('ex_member') }}">@lang('frontend.ex_member')</a></li> --}}
                  <li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
-                 @endif
                </div>
              </ul>
            </li>

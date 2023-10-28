@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->string('established')->nullable();
             $table->string('established_bangla')->nullable();
+            $table->string('eiin')->nullable();
+            $table->string('eiin_bangla')->nullable();
             $table->string('meta')->nullable();
             $table->string('meta_title')->nullable();
             $table->longText('description')->nullable();

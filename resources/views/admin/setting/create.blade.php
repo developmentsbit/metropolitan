@@ -79,6 +79,30 @@
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-6">
+							<label>@lang('setting.established'):</label>
+							<div class="input-group mt-2">
+								<input type="text" class="form-control" name="established"  value="{{ $data->established }}">
+							</div>
+						</div>
+						<div class="form-group mb-3 col-md-6">
+							<label>@lang('setting.established_bangla'):</label>
+							<div class="input-group mt-2">
+								<input type="text" class="form-control" name="established_bangla"  value="{{ $data->established_bangla }}">
+							</div>
+						</div>
+						<div class="form-group mb-3 col-md-6">
+							<label>@lang('setting.eiin'):</label>
+							<div class="input-group mt-2">
+								<input type="text" class="form-control" name="eiin"  value="{{ $data->eiin }}">
+							</div>
+						</div>
+						<div class="form-group mb-3 col-md-6">
+							<label>@lang('setting.eiin_bangla'):</label>
+							<div class="input-group mt-2">
+								<input type="text" class="form-control" name="eiin_bangla"  value="{{ $data->eiin_bangla }}">
+							</div>
+						</div>
+						<div class="form-group mb-3 col-md-6">
 							<label>@lang('setting.meta'):</label>
 							<div class="input-group mt-2">
 								<input type="text" class="form-control" name="meta"  value="{{ $data->meta }}">

@@ -12,10 +12,10 @@
 
       <ul class="list-group p-0">
         <li class="list-group-item bg-success text-white">
-          <span class="student"><span uk-icon="icon: info; ratio: 1.2"></span>&nbsp;&nbsp;{{ $data->title }}</span>
+          <span class="student"><span uk-icon="icon: info; ratio: 1.2"></span>&nbsp;&nbsp;@if($lang == 'en'){{$n->title ?: $n->title_bn}}@else {{$n->title_bn ?: $n->title}}@endif</span>
         </li>
         <br>
-        <h5>{{ $data->title }}<a href="{{ asset($data->image) }}" class="btn btn-sm btn-dark float-end" download="{{ asset($data->image) }}"> Download</a></h5>
+        <h5>@if($lang == 'en'){{$n->title ?: $n->title_bn}}@else {{$n->title_bn ?: $n->title}}@endif<a href="{{ asset($data->image) }}" class="btn btn-sm btn-dark float-end" download="{{ asset($data->image) }}"> Download</a></h5>
 
         <p>
           {!! $data->details !!}

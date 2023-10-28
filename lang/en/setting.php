@@ -18,6 +18,9 @@ return [
      'name_bangla'=>'Name Bangla',
      'address_bangla'=>'Adress Bangla',
      'established_bangla'=>'Established Bangla',
+     'eiin'=>'College EIIN Number',
+     'eiin_bangla'=>'College EIIN Number Bangla',
      'type'=>'Type Of Institute',
+     'more_details'=>'Call Us For More Details',
 
 ];
