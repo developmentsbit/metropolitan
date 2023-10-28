@@ -73,6 +73,8 @@ class SettingController extends Controller
       $data['phone']        = $request->phone;
       $data['established']  = $request->established;
       $data['established_bangla']  = $request->established_bangla;
+      $data['eiin']  = $request->eiin;
+      $data['eiin_bangla']  = $request->eiin_bangla;
       $data['meta']         = $request->meta;
       $data['meta_title']   = $request->meta_title;
       $data['description']  = $request->description;
