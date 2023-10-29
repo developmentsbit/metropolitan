@@ -34,7 +34,7 @@
               <tr style="font-size: 12px;">
                 <td>{{ $i++ }}</td>
                 <td><a href="{{ url('noticesdetails',$d->id) }}" style="text-decoration: none;color: black">{{ date('d M Y', strtotime($d->date)); }}</a></td>
-                <td><a href="{{ url('noticesdetails',$d->id) }}" style="text-decoration: none;color: black">@if($lang == 'en'){{$data->title ?: $data->title_bn}}@else {{$data->title_bn ?: $data->title}}@endif</a></td>
+                <td><a href="{{ url('noticesdetails',$d->id) }}" style="text-decoration: none;color: black">@if($lang == 'en'){{$d->title ?: $d->title_bn}}@else {{$d->title_bn ?: $d->title}}@endif</a></td>
                 <td><a  href="{{ asset($d->image) }}" class="btn btn-sm btn-danger" download="" ><img src="frontend/img/pdf_icon.png" class="img-fluid"></a></td>
               </tr>
 
