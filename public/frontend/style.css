@@ -952,13 +952,13 @@ html{
 }
 
 .eiin h5{
-  font-size: 13px;
+  font-size: 13px !important;
   text-transform: uppercase;
   padding: 0px 15px 0px 4px;
 }
 
 .eiin span{
-  font-size: 14px;
+  font-size: 14px !important;
   padding: 2px 106px 8px 0px;
   font-weight: bold;
 }
@@ -975,13 +975,13 @@ i.fa.fa-id-card {
   line-height: 8px;
 }
 .phone h5{
-  font-size: 13px;
+  font-size: 13px !important;
   text-transform: uppercase;
   margin-right: 11px;
 }
 
 .phone span{
-  font-size: 15px;
+  font-size: 15px !important;
   padding: 2px 57px 4px 0px;
   font-weight: bold;
 }
