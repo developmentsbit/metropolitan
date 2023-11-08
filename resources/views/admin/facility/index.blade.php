@@ -82,7 +82,7 @@
                                                         <div class="modal-dialog">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
-                                                                    <h4 class="modal-title" id="standard-modalLabel">Modal Heading</h4>
+                                                                    <h4 class="modal-title" id="standard-modalLabel">Properties</h4>
                                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
                                                                 </div>
                                                                 <div class="modal-body">
@@ -178,7 +178,7 @@
                                                         <div class="modal-dialog">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
-                                                                    <h4 class="modal-title" id="standard-modalLabel">Modal Heading</h4>
+                                                                    <h4 class="modal-title" id="standard-modalLabel">Properties</h4>
                                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
                                                                 </div>
                                                                 <div class="modal-body">
