@@ -68,7 +68,7 @@ class MenusTableSeeder extends Seeder
                 'id' => 3,
                 'is_hidden' => 'No',
                 'name' => 'User',
-                'order_by' => 1,
+                'order_by' => 2,
                 'parent_id' => 2,
                 'route_name' => 'user.index',
                 'status' => 1,
@@ -77,25 +77,6 @@ class MenusTableSeeder extends Seeder
                 'updated_by' => 1,
             ),
             3 => 
-            array (
-                'bn_name' => 'রোল ম্যানেজমেন্ট',
-                'created_at' => '2023-03-19 18:14:26',
-                'created_by' => 1,
-                'deleted_at' => NULL,
-                'deleted_by' => NULL,
-                'icon' => NULL,
-                'id' => 4,
-                'is_hidden' => 'No',
-                'name' => 'Role Management',
-                'order_by' => 8,
-                'parent_id' => NULL,
-                'route_name' => NULL,
-                'status' => 1,
-                'system_name' => 'Role Management',
-                'updated_at' => '2023-06-14 05:56:11',
-                'updated_by' => 1,
-            ),
-            4 => 
             array (
                 'bn_name' => 'রোল',
                 'created_at' => '2023-03-19 18:17:21',
@@ -107,14 +88,14 @@ class MenusTableSeeder extends Seeder
                 'is_hidden' => 'No',
                 'name' => 'Role',
                 'order_by' => 1,
-                'parent_id' => 4,
+                'parent_id' => 2,
                 'route_name' => 'role.index',
                 'status' => 1,
                 'system_name' => 'Role',
                 'updated_at' => '2023-03-31 18:11:32',
                 'updated_by' => 1,
             ),
-            5 => 
+            4 => 
             array (
                 'bn_name' => 'মেন্যু ম্যানেজমেন্ট',
                 'created_at' => '2023-04-03 10:38:48',
@@ -133,7 +114,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-04-03 10:38:48',
                 'updated_by' => 1,
             ),
-            6 => 
+            5 => 
             array (
                 'bn_name' => 'মেন্যু',
                 'created_at' => '2023-04-03 10:39:32',
@@ -152,9 +133,9 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-04-03 10:39:32',
                 'updated_by' => 1,
             ),
-            7 => 
+            6 => 
             array (
-                'bn_name' => 'আমাদের সম্পর্কে',
+                'bn_name' => 'প্রতিষ্ঠান সম্পর্কে',
                 'created_at' => '2023-06-11 13:35:23',
                 'created_by' => 1,
                 'deleted_at' => NULL,
@@ -171,7 +152,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-14 05:56:11',
                 'updated_by' => 1,
             ),
-            8 => 
+            7 => 
             array (
                 'bn_name' => 'পেইজ',
                 'created_at' => '2023-06-11 13:35:49',
@@ -190,7 +171,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-11 13:36:35',
                 'updated_by' => 1,
             ),
-            9 => 
+            8 => 
             array (
                 'bn_name' => 'প্রশাসনিক তথ্য',
                 'created_at' => '2023-06-11 13:37:43',
@@ -201,17 +182,17 @@ class MenusTableSeeder extends Seeder
                 'id' => 29,
                 'is_hidden' => 'No',
                 'name' => 'Administrator Info.',
-                'order_by' => 18,
+                'order_by' => 17,
                 'parent_id' => NULL,
                 'route_name' => NULL,
                 'status' => 1,
                 'system_name' => 'Administrator Info.',
-                'updated_at' => '2023-09-14 11:41:31',
+                'updated_at' => '2023-11-05 06:13:11',
                 'updated_by' => 1,
             ),
-            10 => 
+            9 => 
             array (
-                'bn_name' => 'চেয়ারম্যান এবং অধ্যক্ষের  বার্তা',
+                'bn_name' => 'অধ্যক্ষ/সভাপতি/প্রধান শিক্ষক',
                 'created_at' => '2023-06-11 13:38:49',
                 'created_by' => 1,
                 'deleted_at' => NULL,
@@ -219,16 +200,16 @@ class MenusTableSeeder extends Seeder
                 'icon' => NULL,
                 'id' => 30,
                 'is_hidden' => 'No',
-                'name' => 'President & Principal Message',
+                'name' => 'Principal/President/Head Teacher',
                 'order_by' => 1,
                 'parent_id' => 29,
                 'route_name' => 'principle.index',
                 'status' => 1,
                 'system_name' => 'Principle',
-                'updated_at' => '2023-10-25 06:20:11',
+                'updated_at' => '2023-09-14 09:58:29',
                 'updated_by' => 1,
             ),
-            11 => 
+            10 => 
             array (
                 'bn_name' => 'গ্যালারি',
                 'created_at' => '2023-06-11 13:54:20',
@@ -239,15 +220,15 @@ class MenusTableSeeder extends Seeder
                 'id' => 31,
                 'is_hidden' => 'No',
                 'name' => 'Gallery',
-                'order_by' => 34,
+                'order_by' => 36,
                 'parent_id' => NULL,
                 'route_name' => NULL,
                 'status' => 1,
                 'system_name' => 'Gallery',
-                'updated_at' => '2023-09-23 09:50:25',
+                'updated_at' => '2023-11-05 06:07:37',
                 'updated_by' => 1,
             ),
-            12 => 
+            11 => 
             array (
                 'bn_name' => 'ফটো গ্যালারি',
                 'created_at' => '2023-06-11 13:54:53',
@@ -258,15 +239,15 @@ class MenusTableSeeder extends Seeder
                 'id' => 32,
                 'is_hidden' => 'No',
                 'name' => 'Photo Gallary',
-                'order_by' => 1,
-                'parent_id' => 31,
+                'order_by' => 4,
+                'parent_id' => 78,
                 'route_name' => 'photogallerys.index',
                 'status' => 1,
                 'system_name' => 'Photo Gallary',
                 'updated_at' => '2023-06-11 13:54:53',
                 'updated_by' => 1,
             ),
-            13 => 
+            12 => 
             array (
                 'bn_name' => 'ভিডিও গ্যালারি',
                 'created_at' => '2023-06-11 13:55:31',
@@ -277,34 +258,15 @@ class MenusTableSeeder extends Seeder
                 'id' => 33,
                 'is_hidden' => 'No',
                 'name' => 'Video Gallary',
-                'order_by' => 2,
-                'parent_id' => 31,
+                'order_by' => 3,
+                'parent_id' => 78,
                 'route_name' => 'videogallerys.index',
                 'status' => 1,
                 'system_name' => 'Video Gallary',
                 'updated_at' => '2023-06-11 13:55:31',
                 'updated_by' => 1,
             ),
-            14 => 
-            array (
-                'bn_name' => 'নোটিশ',
-                'created_at' => '2023-06-11 14:01:55',
-                'created_by' => 1,
-                'deleted_at' => NULL,
-                'deleted_by' => NULL,
-                'icon' => NULL,
-                'id' => 34,
-                'is_hidden' => 'No',
-                'name' => 'Notices',
-                'order_by' => 19,
-                'parent_id' => NULL,
-                'route_name' => NULL,
-                'status' => 1,
-                'system_name' => 'Notices',
-                'updated_at' => '2023-09-14 11:41:31',
-                'updated_by' => 1,
-            ),
-            15 => 
+            13 => 
             array (
                 'bn_name' => 'লিংক',
                 'created_at' => '2023-06-11 14:09:21',
@@ -315,15 +277,15 @@ class MenusTableSeeder extends Seeder
                 'id' => 36,
                 'is_hidden' => 'No',
                 'name' => 'Useful Link',
-                'order_by' => 31,
+                'order_by' => 33,
                 'parent_id' => NULL,
                 'route_name' => NULL,
                 'status' => 1,
                 'system_name' => 'Useful Link',
-                'updated_at' => '2023-09-23 09:50:25',
+                'updated_at' => '2023-11-05 06:07:37',
                 'updated_by' => 1,
             ),
-            16 => 
+            14 => 
             array (
                 'bn_name' => 'লিংক',
                 'created_at' => '2023-06-11 14:09:57',
@@ -334,15 +296,15 @@ class MenusTableSeeder extends Seeder
                 'id' => 37,
                 'is_hidden' => 'No',
                 'name' => 'Link',
-                'order_by' => 1,
-                'parent_id' => 36,
+                'order_by' => 2,
+                'parent_id' => 78,
                 'route_name' => 'usefullink.index',
                 'status' => 1,
                 'system_name' => 'Link',
                 'updated_at' => '2023-06-11 14:09:57',
                 'updated_by' => 1,
             ),
-            17 => 
+            15 => 
             array (
                 'bn_name' => 'সদস্য যোগ করুন',
                 'created_at' => '2023-06-11 14:28:27',
@@ -361,7 +323,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-07-16 05:09:11',
                 'updated_by' => 1,
             ),
-            18 => 
+            16 => 
             array (
                 'bn_name' => 'একাডেমিক তথ্যসমূহ',
                 'created_at' => '2023-06-13 13:34:38',
@@ -380,7 +342,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-14 05:56:11',
                 'updated_by' => 1,
             ),
-            19 => 
+            17 => 
             array (
                 'bn_name' => 'শিক্ষা বর্ষপঞ্জি',
                 'created_at' => '2023-06-13 13:35:34',
@@ -392,14 +354,14 @@ class MenusTableSeeder extends Seeder
                 'is_hidden' => 'No',
                 'name' => 'Academic Calender',
                 'order_by' => 1,
-                'parent_id' => 39,
+                'parent_id' => 27,
                 'route_name' => 'academiccalender.index',
                 'status' => 1,
                 'system_name' => 'Academic Calender',
                 'updated_at' => '2023-06-13 13:35:34',
                 'updated_by' => 1,
             ),
-            20 => 
+            18 => 
             array (
                 'bn_name' => 'ক্লাস রুটিন',
                 'created_at' => '2023-06-13 13:36:26',
@@ -411,14 +373,14 @@ class MenusTableSeeder extends Seeder
                 'is_hidden' => 'No',
                 'name' => 'Class Routine',
                 'order_by' => 2,
-                'parent_id' => 39,
+                'parent_id' => 27,
                 'route_name' => 'classroutine.index',
                 'status' => 1,
                 'system_name' => 'Class Routine',
                 'updated_at' => '2023-06-13 13:36:26',
                 'updated_by' => 1,
             ),
-            21 => 
+            19 => 
             array (
                 'bn_name' => 'ছুটির দিন',
                 'created_at' => '2023-06-13 13:38:27',
@@ -430,33 +392,14 @@ class MenusTableSeeder extends Seeder
                 'is_hidden' => 'No',
                 'name' => 'Holiday List',
                 'order_by' => 3,
-                'parent_id' => 39,
+                'parent_id' => 27,
                 'route_name' => 'holidaylist.index',
                 'status' => 1,
                 'system_name' => 'Holiday List',
                 'updated_at' => '2023-06-13 13:38:27',
                 'updated_by' => 1,
             ),
-            22 => 
-            array (
-                'bn_name' => 'ভর্তি সংক্রান্ত তথ্য',
-                'created_at' => '2023-06-13 14:24:19',
-                'created_by' => 1,
-                'deleted_at' => NULL,
-                'deleted_by' => NULL,
-                'icon' => NULL,
-                'id' => 49,
-                'is_hidden' => 'No',
-                'name' => 'Admission Info.',
-                'order_by' => 19,
-                'parent_id' => NULL,
-                'route_name' => NULL,
-                'status' => 1,
-                'system_name' => 'Admission Info.',
-                'updated_at' => '2023-09-14 11:41:31',
-                'updated_by' => 1,
-            ),
-            23 => 
+            20 => 
             array (
                 'bn_name' => 'ভর্তি সংক্রান্ত তথ্য',
                 'created_at' => '2023-06-13 14:24:49',
@@ -467,15 +410,15 @@ class MenusTableSeeder extends Seeder
                 'id' => 50,
                 'is_hidden' => 'No',
                 'name' => 'Admission Info.',
-                'order_by' => 1,
-                'parent_id' => 49,
+                'order_by' => 5,
+                'parent_id' => 29,
                 'route_name' => 'admissioninfo.index',
                 'status' => 1,
                 'system_name' => 'Admission Info.',
                 'updated_at' => '2023-06-13 14:24:49',
                 'updated_by' => 1,
             ),
-            24 => 
+            21 => 
             array (
                 'bn_name' => 'শ্রেণী সম্পর্কিত তথ্য',
                 'created_at' => '2023-06-14 05:54:43',
@@ -486,15 +429,15 @@ class MenusTableSeeder extends Seeder
                 'id' => 51,
                 'is_hidden' => 'No',
                 'name' => 'Class Info.',
-                'order_by' => 20,
+                'order_by' => 22,
                 'parent_id' => NULL,
                 'route_name' => NULL,
                 'status' => 1,
                 'system_name' => 'Class Info.',
-                'updated_at' => '2023-09-14 11:41:31',
+                'updated_at' => '2023-11-05 06:07:37',
                 'updated_by' => 1,
             ),
-            25 => 
+            22 => 
             array (
                 'bn_name' => 'শ্রেণী যোগ করুন',
                 'created_at' => '2023-06-14 05:55:09',
@@ -513,7 +456,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-14 05:55:09',
                 'updated_by' => 1,
             ),
-            26 => 
+            23 => 
             array (
                 'bn_name' => 'গ্রুপ যোগ করুন',
                 'created_at' => '2023-06-14 05:55:42',
@@ -532,7 +475,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-14 05:55:42',
                 'updated_by' => 1,
             ),
-            27 => 
+            24 => 
             array (
                 'bn_name' => 'বিভাগ যোগ করুন',
                 'created_at' => '2023-06-14 05:56:11',
@@ -543,7 +486,7 @@ class MenusTableSeeder extends Seeder
                 'id' => 54,
                 'is_hidden' => 'No',
                 'name' => 'Add Section',
-                'order_by' => 3,
+                'order_by' => 1,
                 'parent_id' => 51,
                 'route_name' => 'addsection.index',
                 'status' => 1,
@@ -551,7 +494,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-14 06:28:09',
                 'updated_by' => 1,
             ),
-            28 => 
+            25 => 
             array (
                 'bn_name' => 'পরীক্ষা সংক্রান্ত তথ্য',
                 'created_at' => '2023-06-15 05:53:10',
@@ -570,7 +513,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-09-14 11:41:31',
                 'updated_by' => 1,
             ),
-            29 => 
+            26 => 
             array (
                 'bn_name' => 'পরীক্ষার রুটিন',
                 'created_at' => '2023-06-15 05:54:02',
@@ -589,7 +532,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-15 05:54:02',
                 'updated_by' => 1,
             ),
-            30 => 
+            27 => 
             array (
                 'bn_name' => 'সিলেবাস',
                 'created_at' => '2023-06-15 05:54:32',
@@ -608,7 +551,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-15 05:54:32',
                 'updated_by' => 1,
             ),
-            31 => 
+            28 => 
             array (
                 'bn_name' => 'পাঠ পরিকল্পনা',
                 'created_at' => '2023-06-15 05:54:59',
@@ -627,7 +570,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-15 05:54:59',
                 'updated_by' => 1,
             ),
-            32 => 
+            29 => 
             array (
                 'bn_name' => 'সাজেশন্স',
                 'created_at' => '2023-06-15 05:55:51',
@@ -646,7 +589,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-15 05:55:51',
                 'updated_by' => 1,
             ),
-            33 => 
+            30 => 
             array (
                 'bn_name' => 'শিক্ষক - কর্মচারীদের তথ্য',
                 'created_at' => '2023-06-15 06:30:54',
@@ -657,15 +600,15 @@ class MenusTableSeeder extends Seeder
                 'id' => 60,
                 'is_hidden' => 'No',
                 'name' => 'Teacher & Staff info.',
-                'order_by' => 23,
+                'order_by' => 25,
                 'parent_id' => NULL,
                 'route_name' => NULL,
                 'status' => 1,
                 'system_name' => 'Teacher & Staff info.',
-                'updated_at' => '2023-09-14 11:41:31',
+                'updated_at' => '2023-11-05 06:07:37',
                 'updated_by' => 1,
             ),
-            34 => 
+            31 => 
             array (
                 'bn_name' => 'বিভাগ যুক্ত করুন',
                 'created_at' => '2023-06-15 06:31:38',
@@ -684,7 +627,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-15 06:31:38',
                 'updated_by' => 1,
             ),
-            35 => 
+            32 => 
             array (
                 'bn_name' => 'শিক্ষক - কর্মচারী যুক্ত করুন',
                 'created_at' => '2023-06-15 06:32:10',
@@ -703,7 +646,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-15 06:32:10',
                 'updated_by' => 1,
             ),
-            36 => 
+            33 => 
             array (
                 'bn_name' => 'সেটিংস',
                 'created_at' => '2023-06-18 05:29:49',
@@ -714,15 +657,15 @@ class MenusTableSeeder extends Seeder
                 'id' => 63,
                 'is_hidden' => 'No',
                 'name' => 'Website Setting',
-                'order_by' => 53,
-                'parent_id' => NULL,
+                'order_by' => 1,
+                'parent_id' => 78,
                 'route_name' => 'setting.create',
                 'status' => 1,
                 'system_name' => 'Website Setting',
                 'updated_at' => '2023-09-23 09:50:25',
                 'updated_by' => 1,
             ),
-            37 => 
+            34 => 
             array (
                 'bn_name' => 'অ্যাডমিশন তথ্য',
                 'created_at' => '2023-06-27 09:20:02',
@@ -733,15 +676,15 @@ class MenusTableSeeder extends Seeder
                 'id' => 64,
                 'is_hidden' => 'No',
                 'name' => 'Registration Info',
-                'order_by' => 24,
+                'order_by' => 26,
                 'parent_id' => NULL,
                 'route_name' => NULL,
                 'status' => 1,
                 'system_name' => 'Admission Info',
-                'updated_at' => '2023-09-14 11:41:31',
+                'updated_at' => '2023-11-05 06:07:37',
                 'updated_by' => 1,
             ),
-            38 => 
+            35 => 
             array (
                 'bn_name' => 'অ্যাডমিশন তথ্য',
                 'created_at' => '2023-06-27 09:20:55',
@@ -760,9 +703,9 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-06-27 09:20:56',
                 'updated_by' => 1,
             ),
-            39 => 
+            36 => 
             array (
-                'bn_name' => 'ভাইস চেয়ারম্যানের বার্তা',
+                'bn_name' => 'উপাধ্যক্ষ বার্তা',
                 'created_at' => '2023-07-16 05:09:11',
                 'created_by' => 1,
                 'deleted_at' => NULL,
@@ -770,16 +713,16 @@ class MenusTableSeeder extends Seeder
                 'icon' => NULL,
                 'id' => 66,
                 'is_hidden' => 'No',
-                'name' => 'Vice Chairman Message',
+                'name' => 'Vice Principal Message',
                 'order_by' => 2,
                 'parent_id' => 29,
                 'route_name' => 'vice_principal_message.index',
                 'status' => 1,
                 'system_name' => 'Vice Principal Message',
-                'updated_at' => '2023-10-25 06:18:48',
+                'updated_at' => '2023-07-16 05:09:12',
                 'updated_by' => 1,
             ),
-            40 => 
+            37 => 
             array (
                 'bn_name' => 'পাঠাদানের অনুমতি ও স্বীকৃতি',
                 'created_at' => '2023-09-10 09:47:13',
@@ -798,7 +741,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:47:14',
                 'updated_by' => 1,
             ),
-            41 => 
+            38 => 
             array (
                 'bn_name' => 'এমপিও/জাতীয়করণ তথ্য',
                 'created_at' => '2023-09-10 09:48:59',
@@ -817,102 +760,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-09-10 09:48:59',
                 'updated_by' => 1,
             ),
-            42 => 
-            array (
-                'bn_name' => 'শিক্ষার্থীর তথ্য',
-                'created_at' => '2023-09-14 11:41:31',
-                'created_by' => 1,
-                'deleted_at' => NULL,
-                'deleted_by' => NULL,
-                'icon' => NULL,
-                'id' => 69,
-                'is_hidden' => 'No',
-                'name' => 'Student Information',
-                'order_by' => 16,
-                'parent_id' => NULL,
-                'route_name' => NULL,
-                'status' => 1,
-                'system_name' => 'Student Information',
-                'updated_at' => '2023-09-14 11:41:31',
-                'updated_by' => 1,
-            ),
-            43 => 
-            array (
-                'bn_name' => 'শিক্ষার্থী উপস্থিতি তথ্য',
-                'created_at' => '2023-09-14 11:47:58',
-                'created_by' => 1,
-                'deleted_at' => NULL,
-                'deleted_by' => NULL,
-                'icon' => NULL,
-                'id' => 74,
-                'is_hidden' => 'No',
-                'name' => 'Student Attendance Information',
-                'order_by' => 1,
-                'parent_id' => 69,
-                'route_name' => 'student_attendance_info.index',
-                'status' => 1,
-                'system_name' => 'Student Attendance Information',
-                'updated_at' => '2023-09-14 11:47:58',
-                'updated_by' => 1,
-            ),
-            44 => 
-            array (
-                'bn_name' => 'লিঙ্গভিত্তিক শিক্ষার্থীর তথ্য',
-                'created_at' => '2023-09-19 17:48:54',
-                'created_by' => 1,
-                'deleted_at' => NULL,
-                'deleted_by' => NULL,
-                'icon' => NULL,
-                'id' => 75,
-                'is_hidden' => 'No',
-                'name' => 'Gender Wise Student List',
-                'order_by' => 2,
-                'parent_id' => 69,
-                'route_name' => 'gender_wise.index',
-                'status' => 1,
-                'system_name' => 'Gender Wise Student List',
-                'updated_at' => '2023-09-19 19:27:01',
-                'updated_by' => 1,
-            ),
-            45 => 
-            array (
-                'bn_name' => 'শ্রেণী ভিত্তিক অনুমোদিত শাখার তথ্য',
-                'created_at' => '2023-09-19 17:59:47',
-                'created_by' => 1,
-                'deleted_at' => NULL,
-                'deleted_by' => NULL,
-                'icon' => NULL,
-                'id' => 76,
-                'is_hidden' => 'No',
-                'name' => 'Section Wise Student List',
-                'order_by' => 3,
-                'parent_id' => 69,
-                'route_name' => 'section_wise.index',
-                'status' => 1,
-                'system_name' => 'Section Wise Student List',
-                'updated_at' => '2023-09-19 19:27:16',
-                'updated_by' => 1,
-            ),
-            46 => 
-            array (
-                'bn_name' => 'শ্রেণীভিত্তিক শিক্ষার্থীর তথ্য',
-                'created_at' => '2023-09-21 07:28:43',
-                'created_by' => 1,
-                'deleted_at' => NULL,
-                'deleted_by' => NULL,
-                'icon' => NULL,
-                'id' => 77,
-                'is_hidden' => 'No',
-                'name' => 'Class Wise Student Information',
-                'order_by' => 4,
-                'parent_id' => 69,
-                'route_name' => 'class_wise_student.index',
-                'status' => 1,
-                'system_name' => 'Class Wise Student Information',
-                'updated_at' => '2023-09-21 07:28:43',
-                'updated_by' => 1,
-            ),
-            47 => 
+            39 => 
             array (
                 'bn_name' => 'প্রজেক্ট সেটিংস',
                 'created_at' => '2023-09-23 09:50:25',
@@ -923,15 +771,15 @@ class MenusTableSeeder extends Seeder
                 'id' => 78,
                 'is_hidden' => 'No',
                 'name' => 'Project Settings',
-                'order_by' => 28,
+                'order_by' => 30,
                 'parent_id' => NULL,
                 'route_name' => NULL,
                 'status' => 1,
                 'system_name' => 'Project Settings',
-                'updated_at' => '2023-09-23 09:50:25',
+                'updated_at' => '2023-11-05 06:07:37',
                 'updated_by' => 1,
             ),
-            48 => 
+            40 => 
             array (
                 'bn_name' => 'ব্যাকআপ',
                 'created_at' => '2023-09-23 09:56:24',
@@ -942,7 +790,7 @@ class MenusTableSeeder extends Seeder
                 'id' => 80,
                 'is_hidden' => 'No',
                 'name' => 'Backup',
-                'order_by' => 1,
+                'order_by' => 5,
                 'parent_id' => 78,
                 'route_name' => 'backup.index',
                 'status' => 1,
@@ -950,7 +798,7 @@ class MenusTableSeeder extends Seeder
                 'updated_at' => '2023-09-23 09:56:24',
                 'updated_by' => 1,
             ),
-            49 => 
+            41 => 
             array (
                 'bn_name' => 'নোটিশ',
                 'created_at' => '2023-10-04 05:33:50',
@@ -961,12 +809,145 @@ class MenusTableSeeder extends Seeder
                 'id' => 81,
                 'is_hidden' => 'No',
                 'name' => 'Notices',
-                'order_by' => 1,
-                'parent_id' => 34,
+                'order_by' => 4,
+                'parent_id' => 29,
                 'route_name' => 'notices.index',
                 'status' => 1,
                 'system_name' => 'Notices',
                 'updated_at' => '2023-10-04 05:33:50',
+                'updated_by' => 1,
+            ),
+            42 => 
+            array (
+                'bn_name' => 'ছাত্র তথ্য',
+                'created_at' => '2023-10-31 11:31:10',
+                'created_by' => 1,
+                'deleted_at' => NULL,
+                'deleted_by' => NULL,
+                'icon' => NULL,
+                'id' => 82,
+                'is_hidden' => 'No',
+                'name' => 'student info',
+                'order_by' => 21,
+                'parent_id' => NULL,
+                'route_name' => NULL,
+                'status' => 1,
+                'system_name' => 'student_info',
+                'updated_at' => '2023-11-05 06:07:37',
+                'updated_by' => 1,
+            ),
+            43 => 
+            array (
+                'bn_name' => 'ছাত্র তথ্য',
+                'created_at' => '2023-10-31 11:33:10',
+                'created_by' => 1,
+                'deleted_at' => NULL,
+                'deleted_by' => NULL,
+                'icon' => NULL,
+                'id' => 83,
+                'is_hidden' => 'No',
+                'name' => 'student info',
+                'order_by' => 1,
+                'parent_id' => 82,
+                'route_name' => 'student_info.index',
+                'status' => 1,
+                'system_name' => 'student info',
+                'updated_at' => '2023-10-31 11:33:10',
+                'updated_by' => 1,
+            ),
+            44 => 
+            array (
+                'bn_name' => 'বিষয় সম্পর্কিত তথ্য',
+                'created_at' => '2023-11-05 06:07:37',
+                'created_by' => 1,
+                'deleted_at' => NULL,
+                'deleted_by' => NULL,
+                'icon' => NULL,
+                'id' => 84,
+                'is_hidden' => 'No',
+                'name' => 'Subject Info',
+                'order_by' => 18,
+                'parent_id' => NULL,
+                'route_name' => NULL,
+                'status' => 1,
+                'system_name' => 'Subject Info',
+                'updated_at' => '2023-11-05 06:07:37',
+                'updated_by' => 1,
+            ),
+            45 => 
+            array (
+                'bn_name' => 'বিষয় যোগ করুন',
+                'created_at' => '2023-11-05 06:08:58',
+                'created_by' => 1,
+                'deleted_at' => NULL,
+                'deleted_by' => NULL,
+                'icon' => NULL,
+                'id' => 85,
+                'is_hidden' => 'No',
+                'name' => 'Add Subject',
+                'order_by' => 1,
+                'parent_id' => 84,
+                'route_name' => 'add_subject.index',
+                'status' => 1,
+                'system_name' => 'Add Subject',
+                'updated_at' => '2023-11-05 06:08:58',
+                'updated_by' => 1,
+            ),
+            46 => 
+            array (
+                'bn_name' => 'বিষয়ের পার্ট যোগ করুন',
+                'created_at' => '2023-11-05 11:09:17',
+                'created_by' => 1,
+                'deleted_at' => NULL,
+                'deleted_by' => NULL,
+                'icon' => NULL,
+                'id' => 86,
+                'is_hidden' => 'No',
+                'name' => 'Add Subject Part',
+                'order_by' => 2,
+                'parent_id' => 84,
+                'route_name' => 'add_subject_part.index',
+                'status' => 1,
+                'system_name' => 'Add Subject Part',
+                'updated_at' => '2023-11-05 11:09:17',
+                'updated_by' => 1,
+            ),
+            47 => 
+            array (
+                'bn_name' => 'নাম্বার বন্টন',
+                'created_at' => '2023-11-06 06:59:16',
+                'created_by' => 1,
+                'deleted_at' => NULL,
+                'deleted_by' => NULL,
+                'icon' => NULL,
+                'id' => 87,
+                'is_hidden' => 'No',
+                'name' => 'Mark Distribution',
+                'order_by' => 3,
+                'parent_id' => 84,
+                'route_name' => 'mark_distribution.index',
+                'status' => 1,
+                'system_name' => 'Mark Distribution',
+                'updated_at' => '2023-11-06 06:59:16',
+                'updated_by' => 1,
+            ),
+            48 => 
+            array (
+                'bn_name' => 'সুযোগ সুবিধা সমূহ',
+                'created_at' => '2023-11-08 05:08:09',
+                'created_by' => 1,
+                'deleted_at' => NULL,
+                'deleted_by' => NULL,
+                'icon' => NULL,
+                'id' => 88,
+                'is_hidden' => 'No',
+                'name' => 'Facilities',
+                'order_by' => 7,
+                'parent_id' => 27,
+                'route_name' => 'facilities.index',
+                'status' => 1,
+                'system_name' => 'Facilities',
+                'updated_at' => '2023-11-08 05:08:09',
                 'updated_by' => 1,
             ),
         ));
