@@ -8,6 +8,7 @@ use App\Models\teaching_permission;
 use App\Models\mpoNationalizatio;
 use App\Models\gender_wise;
 use App\Models\section_wise;
+use App\Models\Facility;
 use PDF;
 use App;
 
@@ -19,9 +20,17 @@ class FrontendController extends Controller
         // return ;
 
 		$notice = DB::table("notices")->where("type",1)->limit(6)->orderby('id','DESC')->get();
-		return view('frontend.home',compact('notice'));
+        $facility = Facility::all();
+		return view('frontend.home',compact('notice','facility'));
 
 	}
+
+    public function view_facility($id)
+    {
+        $data = Facility::find($id)->chilldren;
+        $facility = Facility::find($id);
+        return view('frontend.view_facility',compact('data','facility'));
+    }
 
 	public function teacher_permission()
 	{

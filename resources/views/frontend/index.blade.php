@@ -210,6 +210,29 @@ right:0;
   padding: 7px;
   border-radius: 12%;
 }
+.facility_area {
+    background: #683091;
+    box-shadow: 0px 1px 3px 1px lightgray;
+    border-bottom: 5px solid #05c76a;
+}
+
+div#FacBox {
+    padding: 0px;
+    color: white;
+    border-right: 1px solid white;
+    padding: 8px 27px;
+    border-bottom: 1px solid white;
+}
+
+div#FacBox a {
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+div#FacBox a:hover {
+    text-decoration: none;
+    color: rgb(248, 0, 0);
+}
 </style>
 
 @if(config('app.locale') == 'en')

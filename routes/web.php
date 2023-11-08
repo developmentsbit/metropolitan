@@ -48,6 +48,7 @@ use App\Http\Controllers\MpoNationalizatioController;
 use App\Http\Controllers\StudentAttendanceInfoController;
 use App\Http\Controllers\ClassWiseStudentinfo;
 use App\Http\Controllers\BackupController;
+use App\Http\Controllers\FacilityController;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -87,6 +88,7 @@ Route::get('/photo_archive', [MujibController::class,'photo_archive']);
 Route::get('/speeches', [MujibController::class,'speeches']);
 
 Route::get('/', [FrontendController::class, 'index']);
+Route::get('/view_facility/{id}', [FrontendController::class, 'view_facility']);
 Route::get('/page/{id}', [FrontendController::class, 'page']);
 Route::get('/teacher_permission', [FrontendController::class, 'teacher_permission']);
 Route::get('/mpo_nationalizations', [FrontendController::class, 'mpo_nationalizations']);
@@ -279,7 +281,17 @@ Route::group(['middleware' => 'auth'], function () {
         'vice_principal_message' => VicePrincipalMessage::class,
         'gender_wise' => GenderWiseController::class,
         'section_wise' => SectionWiseController::class,
+        'facilities' => FacilityController::class,
     ]);
+
+    //facility extra routes;
+    Route::get('restore_facility/{id}',[FacilityController::class,'restore'])->name('facilities.restore');
+    Route::get('delete_facility/{id}',[FacilityController::class,'delete'])->name('facilities.delete');
+
+    Route::get('loadFacilityImage/{id}',[FacilityController::class,'loadFacilityImage']);
+    Route::post('submitImage',[FacilityController::class,'submitImage']);
+    Route::get('deleteImage/{id}',[FacilityController::class,'deleteImage']);
+    Route::post('imagetitleUpdate/{id}',[FacilityController::class,'imagetitleUpdate']);
 
     Route::get('retrive_message/{id}', [MessageController::class, 'retrive_message']);
     Route::get('permenantMessageDelete/{id}', [MessageController::class, 'permenantMessageDelete']);
