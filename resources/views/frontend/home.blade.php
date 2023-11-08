@@ -29,10 +29,10 @@ $setting = DB::table("setting")->first();
 					</div>
 				</div><!-------------End Notice---------->
 
+                @if($facility)
                 <!--  facilites area start -->
                 <div class="facility_area mt-3">
                     <div class="row">
-                        @if($facility)
                         @foreach ($facility as $f)
                         <div class="col-xl-4 col-lg-4 col-md-4" id="FacBox">
                             <a href="{{url('view_facility')}}/{{$f->id}}"><b>@if($lang == 'en'){{$f->title ?: $f->title_bn}}@else {{$f->title_bn ?: $f->title}}@endif</b></a>
@@ -46,9 +46,9 @@ $setting = DB::table("setting")->first();
                             </span>
                         </div>
                         @endforeach
-                        @endif
                     </div>
                 </div>
+                @endif
                 <!--  facilites area end -->
 
 				@php
