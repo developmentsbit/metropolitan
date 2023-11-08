@@ -1834,6 +1834,116 @@ class PermissionsTableSeeder extends Seeder
                 'status' => 1,
                 'updated_at' => '2023-10-04 05:33:50',
             ),
+            165 => 
+            array (
+                'created_at' => '2023-11-08 05:08:09',
+                'deleted_at' => NULL,
+                'guard_name' => 'web',
+                'id' => 253,
+                'name' => 'Facilities List',
+                'parent' => 'Facilities',
+                'status' => 1,
+                'updated_at' => '2023-11-08 05:08:09',
+            ),
+            166 => 
+            array (
+                'created_at' => '2023-11-08 05:08:09',
+                'deleted_at' => NULL,
+                'guard_name' => 'web',
+                'id' => 254,
+                'name' => 'Facilities Create',
+                'parent' => 'Facilities',
+                'status' => 1,
+                'updated_at' => '2023-11-08 05:08:09',
+            ),
+            167 => 
+            array (
+                'created_at' => '2023-11-08 05:08:09',
+                'deleted_at' => NULL,
+                'guard_name' => 'web',
+                'id' => 255,
+                'name' => 'Facilities Edit',
+                'parent' => 'Facilities',
+                'status' => 1,
+                'updated_at' => '2023-11-08 05:08:09',
+            ),
+            168 => 
+            array (
+                'created_at' => '2023-11-08 05:08:09',
+                'deleted_at' => NULL,
+                'guard_name' => 'web',
+                'id' => 256,
+                'name' => 'Facilities Delete',
+                'parent' => 'Facilities',
+                'status' => 1,
+                'updated_at' => '2023-11-08 05:08:09',
+            ),
+            169 => 
+            array (
+                'created_at' => '2023-11-08 05:08:09',
+                'deleted_at' => NULL,
+                'guard_name' => 'web',
+                'id' => 257,
+                'name' => 'Facilities View',
+                'parent' => 'Facilities',
+                'status' => 1,
+                'updated_at' => '2023-11-08 05:08:09',
+            ),
+            170 => 
+            array (
+                'created_at' => '2023-11-08 05:08:09',
+                'deleted_at' => NULL,
+                'guard_name' => 'web',
+                'id' => 258,
+                'name' => 'Facilities Print',
+                'parent' => 'Facilities',
+                'status' => 1,
+                'updated_at' => '2023-11-08 05:08:09',
+            ),
+            171 => 
+            array (
+                'created_at' => '2023-11-08 05:08:09',
+                'deleted_at' => NULL,
+                'guard_name' => 'web',
+                'id' => 259,
+                'name' => 'Facilities Edit_history',
+                'parent' => 'Facilities',
+                'status' => 1,
+                'updated_at' => '2023-11-08 05:08:09',
+            ),
+            172 => 
+            array (
+                'created_at' => '2023-11-08 05:08:09',
+                'deleted_at' => NULL,
+                'guard_name' => 'web',
+                'id' => 260,
+                'name' => 'Facilities Deleted_list',
+                'parent' => 'Facilities',
+                'status' => 1,
+                'updated_at' => '2023-11-08 05:08:09',
+            ),
+            173 => 
+            array (
+                'created_at' => '2023-11-08 05:08:09',
+                'deleted_at' => NULL,
+                'guard_name' => 'web',
+                'id' => 261,
+                'name' => 'Facilities Restore',
+                'parent' => 'Facilities',
+                'status' => 1,
+                'updated_at' => '2023-11-08 05:08:09',
+            ),
+            174 => 
+            array (
+                'created_at' => '2023-11-08 05:08:09',
+                'deleted_at' => NULL,
+                'guard_name' => 'web',
+                'id' => 262,
+                'name' => 'Facilities Permanent_delete',
+                'parent' => 'Facilities',
+                'status' => 1,
+                'updated_at' => '2023-11-08 05:08:09',
+            ),
         ));
         
         
