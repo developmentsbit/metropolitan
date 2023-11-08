@@ -29,7 +29,7 @@ $setting = DB::table("setting")->first();
 					</div>
 				</div><!-------------End Notice---------->
 
-                @if($facility)
+                @if(count($facility) > 0)
                 <!--  facilites area start -->
                 <div class="facility_area mt-3">
                     <div class="row">
