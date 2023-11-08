@@ -49,6 +49,11 @@ public/profile_images
 public/setting_image
 public/vice_principal_image
 ems/admin/all_image
+public/facility_image
+# inner public
+public/admin/mpo_nationalization
+public/admin/student_attendance_info
+public/admin/teaching_permission
 public/assets/images/gender_wise
 public/assets/images/section_wise
 
