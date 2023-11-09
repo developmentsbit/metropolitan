@@ -90,6 +90,12 @@ class FrontendController extends Controller
 
 	}
 
+	public function viceprinciples(){
+		$data = DB::table("members")->where('status',1)->where('type',6)->get();
+		return view('frontend.members',compact('data'));
+
+	}
+
 
 	public function donar(){
 		$data = DB::table("members")->where('status',1)->where('type',4)->get();

@@ -45,6 +45,7 @@
 							<div class="input-group mt-2">
 								<select class="form-control" name="type">
 									<option value="1">@lang('member.principal')</option>
+									<option value="6">@lang('member.vice_principal')</option>
 									<option value="2">@lang('member.chairman')</option>
 									<option value="3">@lang('member.managing_commitee')</option>
 									<option value="4">@lang('member.donar')</option>

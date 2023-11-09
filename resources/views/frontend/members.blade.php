@@ -20,6 +20,8 @@
           @lang('frontend.presidents')
           @elseif($data[0]->type == 1)
           @lang('frontend.principles')
+          @elseif($data[0]->type == 6)
+          @lang('frontend.viceprinciples')
           @elseif($data[0]->type == 4)
           @lang('frontend.donar')
           @else

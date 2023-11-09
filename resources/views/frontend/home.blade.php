@@ -158,6 +158,7 @@ $setting = DB::table("setting")->first();
 											<li><i class="fa fa-caret-right"></i><a href="{{ url('vice_principal_messages') }}">@lang('frontend.vicepresidentmessage') </a></li>
 											<li><i class="fa fa-caret-right"></i><a href="{{ url('principal_message') }}">@lang('frontend.principal_message')</a></li>
 											<li><i class="fa fa-caret-right"></i><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
+											<li><i class="fa fa-caret-right"></i><a href="{{ url('viceprinciples') }}">@lang('frontend.viceprinciples')</a></li>
 											{{-- <li><i class="fa fa-caret-right"></i><a href="{{ url('managing_comitte') }}">@lang('frontend.managing_comitte')</a></li>
 											<li><i class="fa fa-caret-right"></i><a href="{{ url('presidentmessage') }}">@lang('frontend.presidentmessage') </a></li>
 											<li><i class="fa fa-caret-right"></i><a href="{{ url('presidents') }}">@lang('frontend.presidents')</a></li>

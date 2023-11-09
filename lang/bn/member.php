@@ -21,7 +21,12 @@ return [
      'date' => 'তারিখ',
      'image' => 'ছবি/ফাইল',
      'download' => 'ডাউনলোড/ফাইল ছবি',
+
+ 
+     'vice_principal'=>'উপাধ্যক্ষ',
+
      'principal'=>'প্রাক্তন অধ্যক্ষ',
+
      'chairman'=>'চেয়ারম্যান',
      'managing_commitee'=>'ম্যানেজিং কমিটি',
      'donar'=>'ডোনার',
