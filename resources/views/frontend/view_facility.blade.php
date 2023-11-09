@@ -26,8 +26,8 @@
             @if(isset($data))
             @foreach($data as $d)
 
-            <div class="col-sm-6 col-12 p-0">
-            <a href="{{ asset('facility_image') }}/{{$d->image_name}}"><img src="{{ asset('facility_image') }}/{{$d->image_name}}" alt="" class="img-fluid photoimg" style="height: 400px;width:100%;"></a>
+            <div class="col-sm-4 col-12 p-0">
+            <a href="{{ asset('facility_image') }}/{{$d->image_name}}"><img src="{{ asset('facility_image') }}/{{$d->image_name}}" alt="" class="img-fluid photoimg" style="height: 250px;width:100%;"></a>
             <div class="uk-overlay uk-overlay-primary uk-position-bottom p-1 text-center">
                 <p>
                     @if($lang == 'en')
