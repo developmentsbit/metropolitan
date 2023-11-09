@@ -245,6 +245,11 @@ a.uk-position-center-right.uk-position-small.uk-hidden-hover.uk-icon.uk-slidenav
     background: #05c76a;
     color: white;
 }
+li.slideBox {
+    border: 1px solid white;
+    padding: 5px;
+    background: #ebebeb;
+}
 </style>
 
 @if(config('app.locale') == 'en')

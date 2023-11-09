@@ -82,7 +82,7 @@ $array = array(
     'vice_principal_message'=>'Vice Principal Message',
     'managing_comitte'=>'Managing Comitte',
     'presidents'=>'Presidents',
-    'principles'=>'Principals List',
+    'Principals'=>'Principals List',
     'donar'=>'Donar Members List',
     'ex_member'=>'Ex Members List',
     'teachers_and_staff'=>'Teachers and staff',
@@ -188,6 +188,7 @@ $array = array(
 
     'facilities' => 'Extra Facilities',
     'co_curriculum' => 'Co-curriculum Activities',
+    'pricnipals' => 'Our Honorable Principals & Vice Principals',
 
 );
 
