@@ -13,6 +13,20 @@ return new class extends Migration
     {
         Schema::create('co_curriculam_activities', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('title_bn')->nullable();
+            $table->text('description')->nullable();
+            $table->text('description_bn')->nullable();
+            $table->string('image')->default('0');
+            $table->date('deleted_at')->nullable();
+            $table->bigInteger('create_by')->unsigned()->nullable();
+            $table->foreign('create_by')->references('id')->on('users');
+            $table->bigInteger('edit_by')->unsigned()->nullable();
+            $table->foreign('edit_by')->references('id')->on('users');
+            $table->bigInteger('delete_by')->unsigned()->nullable();
+            $table->foreign('delete_by')->references('id')->on('users');
+            $table->bigInteger('restore_by')->unsigned()->nullable();
+            $table->foreign('restore_by')->references('id')->on('users');
             $table->timestamps();
         });
     }
