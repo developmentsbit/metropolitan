@@ -30,6 +30,9 @@ $setting = DB::table("setting")->first();
 				</div><!-------------End Notice---------->
 
                 @if(count($facility) > 0)
+                <div class="text-center mt-2 sec-div">
+                    <h5>@lang('frontend.facilities')</h5>
+                </div>
                 <!--  facilites area start -->
                 <div class="facility_area mt-3">
                     <div class="row">
@@ -40,7 +43,7 @@ $setting = DB::table("setting")->first();
                             <span>
                                 @if($lang == 'en')
                                 {{Str::limit($f->description,'30') ?: Str::limit($f->description_bn,'30')}}
-                                @else 
+                                @else
                                 {{Str::limit($f->description_bn,'30') ?: Str::limit($f->description,'30')}}
                                 @endif
                             </span>
@@ -50,6 +53,60 @@ $setting = DB::table("setting")->first();
                 </div>
                 @endif
                 <!--  facilites area end -->
+
+                @if(count($activity) > 0)
+                <div class="text-center mt-2 sec-div">
+                    <h5>@lang('frontend.co_curriculum')</h5>
+                </div>
+                <!-- activity area start -->
+                <div class="uk-position-relative uk-visible-toggle uk-light mt-4" tabindex="-1" uk-slider="autoplay: true finite: true autoplay-interval: 2000">
+
+                    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-5@m">
+                        @foreach ($activity as $v)
+                        <a href="{{url('/view_cocurriculam')}}/{{$v->id}}">
+                            <li class="slideBox">
+                                <img src="{{asset('co_curriculum')}}/{{$v->image}}" width="200" height="400" alt="">
+                                {{-- <div class="uk-position-center uk-panel"><h1>1</h1></div> --}}
+                            </li>
+                        </a>
+                        @endforeach
+                    </ul>
+
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
+
+                </div>
+                <!-- activity area end -->
+                @endif
+
+
+                @if(count($principals) > 0)
+                <div class="text-center mt-2 sec-div">
+                    <h5>@lang('frontend.pricnipals')</h5>
+                </div>
+                <!-- activity area start -->
+                <div class="uk-position-relative uk-visible-toggle uk-light mt-4" tabindex="-1" uk-slider="autoplay: true finite: true autoplay-interval: 2000">
+
+                    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-5@m">
+                        @foreach ($principals as $v)
+                        <a href="{{url('/memberdetails')}}/{{$v->id}}">
+                            <li class="slideBox">
+                                <img src="{{asset($v->image)}}" width="200" height="400" alt="" style="height: 200px;width:350px;">
+                                <div class="text-center" style="color: black !important;">
+                                    <b>{{$v->name}}</b>
+                                    <span>{{$v->designation}}</span>
+                                </div>
+                            </li>
+                        </a>
+                        @endforeach
+                    </ul>
+
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
+
+                </div>
+                <!-- activity area end -->
+                @endif
 
 				@php
 				$about = DB::table("pages")->where('id',1)->first();

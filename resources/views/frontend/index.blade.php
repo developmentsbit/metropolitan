@@ -233,6 +233,23 @@ div#FacBox a:hover {
     text-decoration: none;
     color: rgb(248, 0, 0);
 }
+.text-center.mt-2.sec-div {
+    background: lightgray;
+    padding: 7px 0px;
+}
+a.uk-position-center-left.uk-position-small.uk-hidden-hover.uk-icon.uk-slidenav-previous.uk-slidenav {
+    background: #05c76a;
+    color: white;
+}
+a.uk-position-center-right.uk-position-small.uk-hidden-hover.uk-icon.uk-slidenav-next.uk-slidenav {
+    background: #05c76a;
+    color: white;
+}
+li.slideBox {
+    border: 1px solid white;
+    padding: 5px;
+    background: #ebebeb;
+}
 </style>
 
 @if(config('app.locale') == 'en')
@@ -326,7 +343,7 @@ div#FacBox a:hover {
 
       <div class="col-sm-12 col-12  tophead">
       <div class="row">
-        
+
         <div class="col-sm-6 col-12">
           <div class="siteLogo">
             <a href="{{ url('/') }}"><img src="{{ asset($setting->image) }}" class="img-fluid"></a>
@@ -488,7 +505,7 @@ div#FacBox a:hover {
                   <li><a href="{{ url('presidentmessage') }}">@lang('frontend.presidentmessage') </a></li>
                   <li><a href="{{ url('vice_principal_messages') }}">@lang('frontend.vicepresidentmessage') </a></li>
                 <li><a href="{{ url('principal_message') }}">@lang('frontend.principal_message')</a></li>
-                 
+
                  {{--<li><a href="{{ url('managing_comitte') }}">@lang('frontend.managing_comitte')</a></li>
 
                  @if($president_check)
@@ -665,25 +682,28 @@ div#FacBox a:hover {
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       @lang('frontend.co_curricular')
       </a>
-      <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink" style="min-width: 400px;  max-width:100%;">
+      <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink" style="min-width: 514px;  max-width:100%;">
 
         <div class="row">
-
+            @php
+            use App\Models\CoCurriculamActivity;
+            $first_seven = CoCurriculamActivity::take(7)->get();
+            $last_seven = CoCurriculamActivity::skip(7)->take(7)->get();
+            @endphp
           <div class="col-md-6 col-12 dmenu mt-3">
-            <li><a href="{{ url('page/13') }}">@lang('frontend.sports_activities')</a></li>
-            <li><a href="{{ url('page/14') }}">@lang('frontend.cultural_activities')</a></li>
-            <li><a href="{{ url('page/15') }}">@lang('frontend.scouts')</a></li>
-            <li><a href="{{ url('page/18') }}">@lang('frontend.red_crescent')</a></li>
-            <li><a href="{{ url('page/22') }}">@lang('frontend.educational_tour')</a></li>
-
-
+            @if($first_seven)
+            @foreach ($first_seven as $v)
+            <li><a href="{{ url('view_cocurriculam') }}/{{$v->id}}">@if($lang == 'en'){{$v->title ?: $v->title_bn}}@else {{$v->title_bn ?: $v->title}}@endif</a></li>
+            @endforeach
+            @endif
           </div>
 
           <div class="col-md-6 col-12 dmenu mt-3">
-            <li><a href="{{ url('page/19') }}">@lang('frontend.student_cabinet')</a></li>
-            <li><a href="{{ url('page/20') }}">@lang('frontend.debating_club')</a></li>
-            <li><a href="{{ url('page/21') }}">@lang('frontend.language_club')</a></li>
-            <li><a href="{{ url('page/23') }}">@lang('frontend.science_fair')</a></li>
+            @if($last_seven)
+            @foreach ($last_seven as $v)
+            <li><a href="{{ url('view_cocurriculam') }}/{{$v->id}}">@if($lang == 'en'){{$v->title ?: $v->title_bn}}@else {{$v->title_bn ?: $v->title}}@endif</a></li>
+            @endforeach
+            @endif
           </div>
 
 
