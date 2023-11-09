@@ -83,6 +83,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 								@if($d->type == 5)
 								<span>Ex-Member</span>
 								@endif
+								@if($d->type == 6)
+								<span>Vice Principal</span>
+								@endif
 
 							</td>
 							<td>{{ $d->name }}</td>

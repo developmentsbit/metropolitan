@@ -498,6 +498,7 @@ div#FacBox a:hover {
                  <li><a href="{{ url('donar') }}">@lang('frontend.donar')</a></li>
                  <li><a href="{{ url('ex_member') }}">@lang('frontend.ex_member')</a></li> --}}
                  <li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
+                 <li><a href="{{ url('viceprinciples') }}">@lang('frontend.viceprinciples')</a></li>
                </div>
              </ul>
            </li>
@@ -825,6 +826,7 @@ div#FacBox a:hover {
         @if($setting->type == 'college' || $setting->type == 'madrasah')
         <li><a href="{{ url('vice_principal_messages') }}">@lang('frontend.vice_principal_message') </a></li>
         <li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
+        <li><a href="{{ url('viceprinciples') }}">@lang('frontend.viceprinciples')</a></li>
         @endif
       </ul>
     </li>

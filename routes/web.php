@@ -99,6 +99,7 @@ Route::get('/presidentmessage', [FrontendController::class, 'presidentmessage'])
 Route::get('/managing_comitte', [FrontendController::class, 'managing_comitte']);
 Route::get('/presidents', [FrontendController::class, 'presidents']);
 Route::get('/principles', [FrontendController::class, 'principles']);
+Route::get('/viceprinciples', [FrontendController::class, 'viceprinciples']);
 Route::get('/donar', [FrontendController::class, 'donar']);
 Route::get('/ex_member', [FrontendController::class, 'ex_member']);
 Route::get('/memberdetails/{id}', [FrontendController::class, 'memberdetails']);

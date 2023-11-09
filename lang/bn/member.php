@@ -22,6 +22,7 @@ return [
      'image' => 'ছবি/ফাইল',
      'download' => 'ডাউনলোড/ফাইল ছবি',
      'principal'=>'অধ্যক্ষ',
+     'vice_principal'=>'উপাধ্যক্ষ',
      'chairman'=>'চেয়ারম্যান',
      'managing_commitee'=>'ম্যানেজিং কমিটি',
      'donar'=>'ডোনার',
