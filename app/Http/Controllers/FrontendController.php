@@ -9,6 +9,7 @@ use App\Models\mpoNationalizatio;
 use App\Models\gender_wise;
 use App\Models\section_wise;
 use App\Models\Facility;
+use App\Models\CoCurriculamActivity;
 use PDF;
 use App;
 
@@ -21,7 +22,8 @@ class FrontendController extends Controller
 
 		$notice = DB::table("notices")->where("type",1)->limit(6)->orderby('id','DESC')->get();
         $facility = Facility::all();
-		return view('frontend.home',compact('notice','facility'));
+        $activity = CoCurriculamActivity::all();
+		return view('frontend.home',compact('notice','facility','activity'));
 
 	}
 
@@ -30,6 +32,12 @@ class FrontendController extends Controller
         $data = Facility::find($id)->chilldren;
         $facility = Facility::find($id);
         return view('frontend.view_facility',compact('data','facility'));
+    }
+
+    public function view_cocurriculam($id)
+    {
+        $data = CoCurriculamActivity::find($id);
+        return view('frontend.view_cocurriculam',compact('data'));
     }
 
 	public function teacher_permission()

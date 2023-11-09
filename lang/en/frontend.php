@@ -186,6 +186,9 @@ $array = array(
     'read_more'=>'Read More...',
     'details' => 'Details...',
 
+    'facilities' => 'Extra Facilities',
+    'co_curriculum' => 'Co-curriculum Activities',
+
 );
 
 if($setting->type == 'school')

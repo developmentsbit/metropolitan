@@ -49,6 +49,7 @@ use App\Http\Controllers\StudentAttendanceInfoController;
 use App\Http\Controllers\ClassWiseStudentinfo;
 use App\Http\Controllers\BackupController;
 use App\Http\Controllers\FacilityController;
+use App\Http\Controllers\CoCurriculumActivities;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -125,6 +126,8 @@ Route::get('/section_wise_students',[FrontendController::class,'section_wise_stu
 Route::get('/student_attendance',[FrontendController::class,'student_attendance']);
 
 Route::get('/classWiseStudent/{id}',[FrontendController::class,'classWiseStudent']);
+
+Route::get('/view_cocurriculam/{id}',[FrontendController::class,'view_cocurriculam']);
 
 
 
@@ -282,7 +285,13 @@ Route::group(['middleware' => 'auth'], function () {
         'gender_wise' => GenderWiseController::class,
         'section_wise' => SectionWiseController::class,
         'facilities' => FacilityController::class,
+        'co_curriculum_activities' => CoCurriculumActivities::class,
     ]);
+
+    //co-curriculum extra routes;
+
+    Route::get('restore_cocurriculum/{id}',[CoCurriculumActivities::class,'restore'])->name('co_curriculum_activities.restore');
+    Route::get('delete_cocurriuculum/{id}',[CoCurriculumActivities::class,'delete'])->name('co_curriculum_activities.delete');
 
     //facility extra routes;
     Route::get('restore_facility/{id}',[FacilityController::class,'restore'])->name('facilities.restore');
