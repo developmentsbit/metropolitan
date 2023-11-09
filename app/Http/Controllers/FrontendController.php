@@ -23,7 +23,8 @@ class FrontendController extends Controller
 		$notice = DB::table("notices")->where("type",1)->limit(6)->orderby('id','DESC')->get();
         $facility = Facility::all();
         $activity = CoCurriculamActivity::all();
-		return view('frontend.home',compact('notice','facility','activity'));
+        $principals = DB::table('members')->where('type',1)->orWhere('type',6)->get();
+		return view('frontend.home',compact('notice','facility','activity','principals'));
 
 	}
 

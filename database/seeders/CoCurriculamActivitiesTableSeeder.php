@@ -14,12 +14,12 @@ class CoCurriculamActivitiesTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('co_curriculam_activities')->delete();
-        
+
         \DB::table('co_curriculam_activities')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 2,
                 'title' => 'Cambrian Sports Academy',
@@ -35,7 +35,7 @@ class CoCurriculamActivitiesTableSeeder extends Seeder
                 'created_at' => '2023-11-09 06:08:02',
                 'updated_at' => '2023-11-09 06:08:02',
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 3,
                 'title' => 'Cambrian Cultural Academy',
@@ -51,7 +51,7 @@ class CoCurriculamActivitiesTableSeeder extends Seeder
                 'created_at' => '2023-11-09 06:12:07',
                 'updated_at' => '2023-11-09 06:45:39',
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 4,
                 'title' => 'Cambrian Scout Group',
@@ -67,7 +67,7 @@ class CoCurriculamActivitiesTableSeeder extends Seeder
                 'created_at' => '2023-11-09 06:12:33',
                 'updated_at' => '2023-11-09 06:46:02',
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 5,
                 'title' => 'Cambrian Institute Of Modern Language',
@@ -83,7 +83,7 @@ class CoCurriculamActivitiesTableSeeder extends Seeder
                 'created_at' => '2023-11-09 06:13:14',
                 'updated_at' => '2023-11-09 06:46:47',
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 6,
                 'title' => 'Cambrian Handwriting',
@@ -99,7 +99,7 @@ class CoCurriculamActivitiesTableSeeder extends Seeder
                 'created_at' => '2023-11-09 06:13:29',
                 'updated_at' => '2023-11-09 06:47:16',
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 7,
                 'title' => 'Takewondo',
@@ -115,7 +115,7 @@ class CoCurriculamActivitiesTableSeeder extends Seeder
                 'created_at' => '2023-11-09 06:14:05',
                 'updated_at' => '2023-11-09 06:47:34',
             ),
-            6 => 
+            6 =>
             array (
                 'id' => 8,
                 'title' => 'Leo',
@@ -131,7 +131,7 @@ class CoCurriculamActivitiesTableSeeder extends Seeder
                 'created_at' => '2023-11-09 06:14:24',
                 'updated_at' => '2023-11-09 06:47:47',
             ),
-            7 => 
+            7 =>
             array (
                 'id' => 9,
                 'title' => 'BNCC',
@@ -147,7 +147,7 @@ class CoCurriculamActivitiesTableSeeder extends Seeder
                 'created_at' => '2023-11-09 06:14:38',
                 'updated_at' => '2023-11-09 06:48:12',
             ),
-            8 => 
+            8 =>
             array (
                 'id' => 10,
                 'title' => 'Cambrian Science Club',
@@ -163,7 +163,7 @@ class CoCurriculamActivitiesTableSeeder extends Seeder
                 'created_at' => '2023-11-09 06:15:00',
                 'updated_at' => '2023-11-09 06:48:39',
             ),
-            9 => 
+            9 =>
             array (
                 'id' => 11,
                 'title' => 'Learn Holy Quran',
@@ -179,7 +179,7 @@ class CoCurriculamActivitiesTableSeeder extends Seeder
                 'created_at' => '2023-11-09 06:15:23',
                 'updated_at' => '2023-11-09 06:49:01',
             ),
-            10 => 
+            10 =>
             array (
                 'id' => 12,
                 'title' => 'Rugby Club',
@@ -196,7 +196,7 @@ class CoCurriculamActivitiesTableSeeder extends Seeder
                 'updated_at' => '2023-11-09 06:49:20',
             ),
         ));
-        
-        
+
+
     }
 }

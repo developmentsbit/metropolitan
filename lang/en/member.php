@@ -22,7 +22,7 @@ return [
      'details' => 'Details',
      'date' => 'Date',
      'download'=>'Download',
-     'principal'=>'Principal',
+     'principal'=>'Ex-Principal',
      'chairman'=>'Chairman',
      'managing_commitee'=>'Managing Commitee',
      'donar'=>'Donar',
