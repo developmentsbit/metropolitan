@@ -93,8 +93,8 @@ $setting = DB::table("setting")->first();
                             <li class="slideBox">
                                 <img src="{{asset($v->image)}}" width="200" height="400" alt="" style="height: 200px;width:350px;">
                                 <div class="text-center" style="color: black !important;">
-                                    <b>{{$v->name}}</b>
-                                    <span>{{$v->designation}}</span>
+                                    <b style="font-size: 13px;">{{$v->name}}</b><br>
+                                    <span style="font-size: 15px;">{{$v->designation}}</span>
                                 </div>
                             </li>
                         </a>
