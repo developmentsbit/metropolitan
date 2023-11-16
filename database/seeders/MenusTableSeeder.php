@@ -194,8 +194,8 @@ class MenusTableSeeder extends Seeder
             array (
                 'id' => 30,
                 'parent_id' => 29,
-                'name' => 'Principal/President/Head Teacher',
-                'bn_name' => 'অধ্যক্ষ/সভাপতি/প্রধান শিক্ষক',
+                'name' => 'President/Principal/Vice Principal',
+                'bn_name' => 'চেয়ারম্যান/অধ্যক্ষ/উপাধ্যক্ষ',
                 'system_name' => 'Principle',
                 'route_name' => 'principle.index',
                 'icon' => NULL,
@@ -206,7 +206,7 @@ class MenusTableSeeder extends Seeder
                 'updated_by' => 1,
                 'deleted_by' => NULL,
                 'created_at' => '2023-06-11 13:38:49',
-                'updated_at' => '2023-09-14 09:58:29',
+                'updated_at' => '2023-11-16 11:46:32',
                 'deleted_at' => NULL,
             ),
             10 => 
@@ -707,8 +707,8 @@ class MenusTableSeeder extends Seeder
             array (
                 'id' => 66,
                 'parent_id' => 29,
-                'name' => 'Vice Principal Message',
-                'bn_name' => 'উপাধ্যক্ষ বার্তা',
+                'name' => 'Vice President Message',
+                'bn_name' => 'ভাইস চেয়ারম্যান বার্তা',
                 'system_name' => 'Vice Principal Message',
                 'route_name' => 'vice_principal_message.index',
                 'icon' => NULL,
@@ -719,7 +719,7 @@ class MenusTableSeeder extends Seeder
                 'updated_by' => 1,
                 'deleted_by' => NULL,
                 'created_at' => '2023-07-16 05:09:11',
-                'updated_at' => '2023-07-16 05:09:12',
+                'updated_at' => '2023-11-16 11:48:14',
                 'deleted_at' => NULL,
             ),
             37 => 

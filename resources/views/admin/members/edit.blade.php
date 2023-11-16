@@ -46,51 +46,57 @@
 								<select class="form-control" name="type">
 									@if($data->type == 1)
 									<option value="1">Principle</option>
-									<option value="6">Vice Principle</option>
+									<option value="7">Vice Principle</option>
 									<option value="2">Chairman</option>
-									<option value="3">Managing Committee</option>
-									<option value="4">Donar</option>
-									<option value="5">Ex-Member</option>
+									<option value="3">Vice Chairman</option>
+									<option value="4">Managing Committee</option>
+									<option value="5">Donar</option>
+									<option value="6">Ex-Member</option>
 									@endif
 									@if($data->type == 2)
 									<option value="2">Chairman</option>
 									<option value="1">Principle</option>
-									<option value="6">Vice Principle</option>
-									<option value="3">Managing Committee</option>
-									<option value="4">Donar</option>
-									<option value="5">Ex-Member</option>
-									@endif
-									@if($data->type == 3)
-									<option value="3">Managing Committee</option>
-									<option value="1">Principle</option>
-									<option value="6">Vice Principle</option>
-									<option value="2">Chairman</option>
-									<option value="4">Donar</option>
-									<option value="5">Ex-Member</option>
+									<option value="7">Vice Principle</option>
+									<option value="3">Vice Chairman</option>
+									<option value="4">Managing Committee</option>
+									<option value="5">Donar</option>
+									<option value="6">Ex-Member</option>
 									@endif
 									@if($data->type == 4)
-									<option value="4">Donar</option>
+									<option value="4">Managing Committee</option>
 									<option value="1">Principle</option>
-									<option value="6">Vice Principle</option>
+									<option value="7">Vice Principle</option>
 									<option value="2">Chairman</option>
-									<option value="3">Managing Committee</option>									
-									<option value="5">Ex-Member</option>
+									<option value="3">Vice Chairman</option>
+									<option value="5">Donar</option>
+									<option value="6">Ex-Member</option>
 									@endif
 									@if($data->type == 5)
-									<option value="5">Ex-Member</option>
+									<option value="5">Donar</option>
 									<option value="1">Principle</option>
-									<option value="6">Vice Principle</option>
+									<option value="7">Vice Principle</option>
 									<option value="2">Chairman</option>
-									<option value="3">Managing Committee</option>
-									<option value="4">Donar</option>
+									<option value="3">Vice Chairman</option>
+									<option value="4">Managing Committee</option>									
+									<option value="6">Ex-Member</option>
 									@endif
 									@if($data->type == 6)
-									<option value="6">Vice Principle</option>
+									<option value="6">Ex-Member</option>
+									<option value="1">Principle</option>
+									<option value="7">Vice Principle</option>
+									<option value="2">Chairman</option>
+									<option value="3">Vice Chairman</option>
+									<option value="4">Managing Committee</option>
+									<option value="5">Donar</option>
+									@endif
+									@if($data->type == 7)
+									<option value="7">Vice Principle</option>
 									<option value="1">Principle</option>
 									<option value="2">Chairman</option>
-									<option value="3">Managing Committee</option>
-									<option value="4">Donar</option>
-									<option value="5">Ex-Member</option>
+									<option value="3">Vice Chairman</option>
+									<option value="4">Managing Committee</option>
+									<option value="5">Donar</option>
+									<option value="6">Ex-Member</option>
 									@endif
 								</select>
 							</div>

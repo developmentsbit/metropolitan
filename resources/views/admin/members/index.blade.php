@@ -71,19 +71,22 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 								@if($d->type == 2)
 								<span>Chairman</span>
 								@endif
-
 								@if($d->type == 3)
-								<span>Managing Committee</span>
+								<span>Vice Chairman</span>
 								@endif
 
 								@if($d->type == 4)
-								<span>Donar</span>
+								<span>Managing Committee</span>
 								@endif
 
 								@if($d->type == 5)
+								<span>Donar</span>
+								@endif
+
+								@if($d->type == 6)
 								<span>Ex-Member</span>
 								@endif
-								@if($d->type == 6)
+								@if($d->type == 7)
 								<span>Vice Principal</span>
 								@endif
 

@@ -56,9 +56,17 @@
 									@if($data->type == 1)
 									<option value="1">Principal</option>
 									<option value="2">President</option>
-									@else
+									<option value="3">Vice Principal</option>
+									@endif
+									@if($data->type == 2)
 									<option value="2">President</option>
 									<option value="1">Principal</option>
+									<option value="3">Vice Principal</option>
+									@endif
+									@if($data->type == 3)
+									<option value="3">Vice Principal</option>
+									<option value="1">Principal</option>
+									<option value="2">President</option>
 									@endif
 								</select>
 							</div>

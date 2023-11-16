@@ -844,7 +844,7 @@ li.slideBox {
         @endif
 
         @if($setting->type == 'college' || $setting->type == 'madrasah')
-        <li><a href="{{ url('vice_principal_messages') }}">@lang('frontend.vice_principal_message') </a></li>
+        <li><a href="{{ url('vice_principal_messages') }}">@lang('frontend.vicepresidentmessage') </a></li>
         <li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
         <li><a href="{{ url('viceprinciples') }}">@lang('frontend.viceprinciples')</a></li>
         @endif

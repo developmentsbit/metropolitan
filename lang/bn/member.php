@@ -28,6 +28,7 @@ return [
      'principal'=>'প্রাক্তন অধ্যক্ষ',
 
      'chairman'=>'চেয়ারম্যান',
+     'vicechairman'=>'ভাইস চেয়ারম্যান',
      'managing_commitee'=>'ম্যানেজিং কমিটি',
      'donar'=>'ডোনার',
      'ex_member'=>'প্রাক্তন সদস্য',

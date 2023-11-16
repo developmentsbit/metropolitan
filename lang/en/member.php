@@ -25,6 +25,7 @@ return [
      'vice_principal'=>'Vice Principal',
      'principal'=>'Ex-Principal',
      'chairman'=>'Chairman',
+     'vicechairman'=>'Vice Chairman',
      'managing_commitee'=>'Managing Commitee',
      'donar'=>'Donar',
      'ex_member'=>'Ex Member',

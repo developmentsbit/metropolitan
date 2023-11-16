@@ -64,6 +64,7 @@ class TeacherstaffController extends Controller
        $data['education']            = $request->education;
        $data['gender']               = $request->gender;
        $data['type']                 = $request->type;
+       $data['status'] = '1';
        $data['image'] = '0';
        $image                        = $request->file('image');
 
