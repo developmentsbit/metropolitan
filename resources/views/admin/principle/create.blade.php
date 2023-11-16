@@ -53,8 +53,9 @@
 							<label>@lang('principle.type'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
 								<select class="form-control" name="type">
-									<option value="1">@lang('principle.principal')</option>
 									<option value="2">@lang('principle.president')</option>
+									<option value="1">@lang('principle.principal')</option>
+									<option value="3">@lang('principle.viceprincipal')</option>
 								</select>
 							</div>
 						</div>

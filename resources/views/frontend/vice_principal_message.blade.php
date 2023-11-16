@@ -13,7 +13,7 @@
      <div class="col-sm-12 col-12 p-0"  data-aos="fade-in" data-aos-duration="2000" >
        <ul class="list-group p-0">
         <li class="list-group-item font-weight-bold bg-success text-light" id="about">
-        @lang('frontend.vice_principal_message')
+        @lang('frontend.vicepresidentmessage')
       </li>
       </ul>
       <li class="list-group-item">
