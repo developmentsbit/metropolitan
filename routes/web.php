@@ -50,6 +50,7 @@ use App\Http\Controllers\ClassWiseStudentinfo;
 use App\Http\Controllers\BackupController;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\CoCurriculumActivities;
+use App\Http\Controllers\RunningNoticeController;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -137,6 +138,7 @@ Route::get('/photogallery', [FrontendController::class, 'photogallery']);
 Route::get('/videogallery', [FrontendController::class, 'videogallery']);
 
 Route::get('/noticesdetails/{id}', [FrontendController::class, 'notices']);
+Route::get('/runningnoticesdetails/{id}', [FrontendController::class, 'runningnoticesdetails']);
 Route::get('/events', [FrontendController::class, 'events']);
 
 
@@ -287,6 +289,7 @@ Route::group(['middleware' => 'auth'], function () {
         'section_wise' => SectionWiseController::class,
         'facilities' => FacilityController::class,
         'co_curriculum_activities' => CoCurriculumActivities::class,
+        'running_notice' => RunningNoticeController::class,
     ]);
 
     //co-curriculum extra routes;

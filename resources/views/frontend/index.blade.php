@@ -115,7 +115,11 @@ right:0;
 }
 
 
-
+.scroll marquee a{
+  text-decoration:none;
+  color: #000;
+  font-weight: 500;
+}
 
 
 
@@ -383,6 +387,360 @@ li.slideBox {
 
         </div>
       </div><!------------Top Header End---------------->
+      
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand-lg navbar-light btco-hover-menu menubar" style="background: #fff; border-bottom: 1px solid #e5e5e5; padding: 0px; box-shadow: 0 1px 5px -2px #999;border-top: 1px solid #e5e5e5;">
+      <a class="navbar-brand d-sm-none d-block" style="color: #000; font-weight: bold;" href="">@lang('frontend.select_menu')</a>
+
+        <button  class="navbar-toggler"  uk-toggle="target: #offcanvas-slide" style="background-color: #f4f4f4; color: #fff; padding: 5px 10px;">
+          <span class="navbar-toggler-icon" style="color: #fff;"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse " id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url('/') }}">@lang('frontend.home')</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                @lang('frontend.institute_introduction')
+              </a>
+              <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink" style="min-width: 400px;  max-width:100%;">
+
+                <div class="row">
+
+                  <div class="col-md-6 col-12 dmenu mt-3">
+                    <li><a href="{{ url('page/1') }}">@lang('frontend.about_us')</a></li>
+                    <li><a href="{{ url('page/2') }}">@lang('frontend.mission_vision')</a></li>
+                    <li><a href="{{ url('page/3') }}">@lang('frontend.history')</a></li>
+                    <li><a href="{{ url('page/4') }}">@lang('frontend.citizen_charter')</a></li>
+
+                    <li><a href="{{url('teacher_permission')}}">@lang('frontend.teaching_permission_recognition')</a></li>
+                    <li><a href="{{url('mpo_nationalizations')}}">@lang('frontend.mpo_nationalization_info')</a></li>
+
+                  </div>
+
+                  <div class="col-md-6 col-12 dmenu mt-3">
+                    <li><a href="{{ url('page/6') }}">@lang('frontend.infrastructure')</a></li>
+                    <li><a href="{{ url('page/7') }}">@lang('frontend.yearly_working_plan') </a></li>
+                    <li><a href="{{ url('page/8') }}">@lang('frontend.contact')</a></li>
+                  </div>
+
+
+
+                </div>
+
+
+
+              </ul>
+            </li>
+
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                @lang('frontend.administrative_information')
+              </a>
+              <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink" style="min-width:260px; max-width:100%;">
+
+                @php
+                $president_check = DB::table('principles')->where('type',2)->count();
+                @endphp
+
+                <div class="col-md-12 col-12 dmenu mt-3">
+                  <li><a href="{{ url('presidentmessage') }}">@lang('frontend.presidentmessage') </a></li>
+                  <li><a href="{{ url('vice_principal_messages') }}">@lang('frontend.vicepresidentmessage') </a></li>
+                <li><a href="{{ url('principal_message') }}">@lang('frontend.principal_message')</a></li>
+
+                {{--<li><a href="{{ url('managing_comitte') }}">@lang('frontend.managing_comitte')</a></li>
+
+                @if($president_check)
+                <li><a href="{{ url('presidents') }}">@lang('frontend.presidents')</a></li>
+                @endif
+
+                <li><a href="{{ url('donar') }}">@lang('frontend.donar')</a></li>
+                <li><a href="{{ url('ex_member') }}">@lang('frontend.ex_member')</a></li> --}}
+                <li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
+                <li><a href="{{ url('viceprinciples') }}">@lang('frontend.viceprinciples')</a></li>
+              </div>
+            </ul>
+          </li>
+
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              @lang('frontend.teachers_and_staff')
+            </a>
+            @if($setting->type == 'college')
+            <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink" style="min-width: 500px;  max-width:100%;">
+            @else
+            <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink" style="min-width: 217px;  max-width:100%;">
+            @endif
+
+              <div class="col-md-12 col-12 dmenu mt-3">
+              <div class="row">
+                @if($setting->type == 'college')
+                <div class="col-md-7">
+
+              <li><a href="{{ url('teacherinfo') }}">@lang('frontend.teacherinfo')</a></li>
+              @php
+                $department = DB::table('department')->limit(9)->get();
+              @endphp
+
+              @if(isset($department))
+              @foreach($department as $d)
+              <li><a href="{{ url('department_teacher/'.$d->id) }}">@if($lang == 'en'){{$d->department}}@elseif($lang == 'bn'){{$d->department_name_bn}}@endif</a></li>
+
+              @endforeach
+              @endif
+
+
+
+              </div>
+
+                <div class="col-md-5">
+                @if($setting->type == 'college')
+                @php
+                $department2 = DB::table('department')->skip(9)->limit(9)->get();
+              @endphp
+
+              @if(isset($department2))
+              @foreach($department2 as $d)
+              <li><a href="{{ url('department_teacher/'.$d->id) }}">@if($lang == 'en'){{$d->department}}@elseif($lang == 'bn'){{$d->department_name_bn}}@endif</a></li>
+
+              @endforeach
+              @endif
+
+
+              <li><a href="{{ url('staffinfo') }}">@lang('frontend.staffinfo')</a></li>
+
+            </div>
+            @endif
+              @else
+              <div class="col-12">
+
+                    <li><a href="{{ url('teacherinfo') }}">@lang('frontend.teacherinfo')</a></li>
+                    <li><a href="{{ url('staffinfo') }}">@lang('frontend.staffinfo')</a></li>
+              </div>
+              @endif
+              </div>
+
+            </div>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          @lang('frontend.student')
+        </a>
+        <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
+
+          <div class="col-md-12 col-12 dmenu mt-3">
+
+
+            <li><a href="{{url('gender_wise_student_list')}}">@lang('frontend.class_gender_based_education')</a></li>
+          <li><a href="{{url('section_wise_student_list')}}">@lang('frontend.section_wise_student')</a></li>
+
+
+          {{-- <li><a href="{{url('gender_wise_students')}}">@lang('frontend.class_gender_based_education')</a></li>
+          <li><a href="{{url('section_wise_students')}}">@lang('frontend.section_wise_student')</a></li> --}}
+
+          <li><a href="{{ url('student_attendance') }}">@lang('frontend.student_attendance')</a></li>
+          {{--
+
+            this is from original database
+
+            @php
+            $class = DB::table('addclass')->get();
+          @endphp
+          @if($class)
+          @foreach ($class as $c)
+            @php
+            $check = DB::table('class_wise_student_infos')->where('class_id',$c->id)->count();
+            @endphp
+
+            @if($check > 0)
+          <li><a href="{{url('classWiseStudent')}}/{{$c->id}}">@if($lang == 'en'){{$c->class_name}}@else {{$c->class_name_bn}}@endif</a></li>
+            @endif
+          @endforeach
+          @endif
+          --}}
+
+          {{-- this is from secondary database --}}
+
+          @php
+          $class = DB::connection('mysql_second')->table('add_class')->get();
+          @endphp
+
+                @if($class)
+                @foreach ($class as $c)
+
+                @php
+                $count = DB::connection('mysql_second')->table('running_student_info')->where('class_id',$c->id)->count();
+                @endphp
+
+                @if($count > 0)
+                <li><a href="{{url('class_student_info')}}/{{$c->id}}">{{$c->class_name}}</a></li>
+                @endif
+                @endforeach
+                @endif
+
+        </div>
+        </ul>
+        </li>
+
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          @lang('frontend.academic_information')
+        </a>
+        <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
+
+          <div class="col-md-12 col-12 dmenu mt-3">
+
+          <li><a href="{{ url('page/9') }}">@lang('frontend.rules_regulation')</a></li>
+          <li><a href="{{ url('academiccalenders') }}">@lang('frontend.academiccalenders')</a></li>
+          <li><a href="{{ url('classroutines') }}">@lang('frontend.classroutines')</a></li>
+          <li><a href="{{ url('holidaylists') }}">@lang('frontend.holidaylists')</a></li>
+          <li><a href="{{ url('page/10') }}">@lang('frontend.uniform')</a></li>
+          <li><a href="{{ url('page/11') }}">@lang('frontend.fees')</a></li>
+          <li><a href="{{ url('page/5') }}">@lang('frontend.studentinfochart')</a></li>
+
+
+        </div>
+        </ul>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        @lang('frontend.co_curricular')
+        </a>
+        <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink" style="min-width: 514px;  max-width:100%;">
+
+        <div class="row">
+            @php
+            use App\Models\CoCurriculamActivity;
+            $first_seven = CoCurriculamActivity::take(7)->get();
+            $last_seven = CoCurriculamActivity::skip(7)->take(7)->get();
+            @endphp
+          <div class="col-md-6 col-12 dmenu mt-3">
+            @if($first_seven)
+            @foreach ($first_seven as $v)
+            <li><a href="{{ url('view_cocurriculam') }}/{{$v->id}}">@if($lang == 'en'){{$v->title ?: $v->title_bn}}@else {{$v->title_bn ?: $v->title}}@endif</a></li>
+            @endforeach
+            @endif
+          </div>
+
+          <div class="col-md-6 col-12 dmenu mt-3">
+            @if($last_seven)
+            @foreach ($last_seven as $v)
+            <li><a href="{{ url('view_cocurriculam') }}/{{$v->id}}">@if($lang == 'en'){{$v->title ?: $v->title_bn}}@else {{$v->title_bn ?: $v->title}}@endif</a></li>
+            @endforeach
+            @endif
+          </div>
+
+
+
+        </div>
+
+
+
+        </ul>
+        </li>
+
+
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        @lang('frontend.admission_information')
+        </a>
+        <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
+
+        <div class="col-md-12 col-12 dmenu mt-3">
+
+        <li><a href="{{ url('admissionInfo/3') }}">@lang('frontend.prospectus')</a></li>
+        <li><a href="{{ url('admissionInfo/2') }}">@lang('frontend.admission_rules')</a></li>
+        <li><a href="{{ url('admissionInfo/4') }}">@lang('frontend.admission_procedure')</a></li>
+        <li><a href="{{ url('admissionInfo/5') }}">@lang('frontend.admission_test_result')</a></li>
+        <li><a href="{{ url('admissionInfo/6') }}">@lang('frontend.admission_test_questions')</a></li>
+
+
+        </div>
+        </ul>
+        </li>
+
+
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        @lang('frontend.exam_information')
+        </a>
+        <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
+
+        <div class="col-md-12 col-12 dmenu mt-3">
+        <li><a href="{{ url('page/12') }}">@lang('frontend.exam_rules')</a></li>
+        <li><a href="{{ url('examroutines') }}">@lang('frontend.examroutines')</a></li>
+        <li><a href="{{ url('examsyllabus') }}">@lang('frontend.examsyllabus')</a></li>
+        <!--<li><a href="{{ url('examsuggession') }}">@lang('frontend.examsuggession')</a></li>-->
+
+        </div>
+        </ul>
+        </li>
+
+
+
+
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        @lang('frontend.gallery')
+        </a>
+        <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink" style="min-width: 150px; max-width:100%;">
+
+        <div class="col-md-12 col-12 dmenu mt-3">
+        <li><a href="{{ url('photogallery') }}">@lang('frontend.photogallery')</a></li>
+        <li><a href="{{ url('videogallery') }}">@lang('frontend.videogallery')</a></li>
+        </div>
+        </ul>
+        </li>
+
+
+        <!--<li class="nav-item">-->
+        <!--    <a class="nav-link" href="{{ url('complainbox') }}">@lang('frontend.complainbox')</a>-->
+        <!--</li>-->
+
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="col-sm-12">
+      <div class=" bg-light" style="">
+      <div class="row">
+          <div class="col-12 pt-1 scroll">
+            <marquee behavior="scroll" direction="left" style="padding-right: 15px;padding-left: 15px;font-size: 17px;">
+            @php use App\Models\running_notice; $data= running_notice::limit(3)->get(); @endphp  
+            @if(isset($data))
+              @foreach($data as $r)
+              <a href="{{ url('runningnoticesdetails',$r->id)  }}">**** @if($lang == 'en'){{$r->title ?: $r->title_bn}}@else {{$r->title_bn ?: $r->title}}@endif</a>
+              @endforeach
+              @endif
+            </marquee>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
       <div class="col-sm-12 col-12 p-0">
@@ -439,344 +797,7 @@ li.slideBox {
         </button>
       </div>
 
-      <nav class="navbar navbar-expand-lg navbar-light btco-hover-menu menubar" style="background: #fff; border-bottom: 1px solid #e5e5e5; padding: 0px; box-shadow: 0 1px 5px -2px #999;">
-
-
-        <a class="navbar-brand d-sm-none d-block" style="color: #000; font-weight: bold;" href="">@lang('frontend.select_menu')</a>
-
-        <button  class="navbar-toggler"  uk-toggle="target: #offcanvas-slide" style="background-color: #f4f4f4; color: #fff; padding: 5px 10px;">
-          <span class="navbar-toggler-icon" style="color: #fff;"></span>
-        </button>
-
-
-        <div class="collapse navbar-collapse " id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url('/') }}"><i class="fa fa-home" aria-hidden="true" style="font-size: 15px;"></i></a>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                @lang('frontend.institute_introduction')
-              </a>
-              <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink" style="min-width: 400px;  max-width:100%;">
-
-                <div class="row">
-
-                  <div class="col-md-6 col-12 dmenu mt-3">
-                    <li><a href="{{ url('page/1') }}">@lang('frontend.about_us')</a></li>
-                    <li><a href="{{ url('page/2') }}">@lang('frontend.mission_vision')</a></li>
-                    <li><a href="{{ url('page/3') }}">@lang('frontend.history')</a></li>
-                    <li><a href="{{ url('page/4') }}">@lang('frontend.citizen_charter')</a></li>
-
-                    <li><a href="{{url('teacher_permission')}}">@lang('frontend.teaching_permission_recognition')</a></li>
-                    <li><a href="{{url('mpo_nationalizations')}}">@lang('frontend.mpo_nationalization_info')</a></li>
-
-                  </div>
-
-                  <div class="col-md-6 col-12 dmenu mt-3">
-                    <li><a href="{{ url('page/6') }}">@lang('frontend.infrastructure')</a></li>
-                    <li><a href="{{ url('page/7') }}">@lang('frontend.yearly_working_plan') </a></li>
-                    <li><a href="{{ url('page/8') }}">@lang('frontend.contact')</a></li>
-                  </div>
-
-
-
-                </div>
-
-
-
-              </ul>
-            </li>
-
-
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                @lang('frontend.administrative_information')
-              </a>
-              <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink" style="min-width:260px; max-width:100%;">
-
-                @php
-                 $president_check = DB::table('principles')->where('type',2)->count();
-                @endphp
-
-                <div class="col-md-12 col-12 dmenu mt-3">
-                  <li><a href="{{ url('presidentmessage') }}">@lang('frontend.presidentmessage') </a></li>
-                  <li><a href="{{ url('vice_principal_messages') }}">@lang('frontend.vicepresidentmessage') </a></li>
-                <li><a href="{{ url('principal_message') }}">@lang('frontend.principal_message')</a></li>
-
-                 {{--<li><a href="{{ url('managing_comitte') }}">@lang('frontend.managing_comitte')</a></li>
-
-                 @if($president_check)
-                 <li><a href="{{ url('presidents') }}">@lang('frontend.presidents')</a></li>
-                 @endif
-
-                 <li><a href="{{ url('donar') }}">@lang('frontend.donar')</a></li>
-                 <li><a href="{{ url('ex_member') }}">@lang('frontend.ex_member')</a></li> --}}
-                 <li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
-                 <li><a href="{{ url('viceprinciples') }}">@lang('frontend.viceprinciples')</a></li>
-               </div>
-             </ul>
-           </li>
-
-
-
-           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              @lang('frontend.teachers_and_staff')
-            </a>
-            @if($setting->type == 'college')
-            <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink" style="min-width: 500px;  max-width:100%;">
-            @else
-            <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink" style="min-width: 217px;  max-width:100%;">
-            @endif
-
-              <div class="col-md-12 col-12 dmenu mt-3">
-               <div class="row">
-                @if($setting->type == 'college')
-                <div class="col-md-7">
-
-               <li><a href="{{ url('teacherinfo') }}">@lang('frontend.teacherinfo')</a></li>
-               @php
-                $department = DB::table('department')->limit(9)->get();
-               @endphp
-
-               @if(isset($department))
-               @foreach($department as $d)
-               <li><a href="{{ url('department_teacher/'.$d->id) }}">@if($lang == 'en'){{$d->department}}@elseif($lang == 'bn'){{$d->department_name_bn}}@endif</a></li>
-
-               @endforeach
-               @endif
-
-
-
-               </div>
-
-                <div class="col-md-5">
-                @if($setting->type == 'college')
-                @php
-                $department2 = DB::table('department')->skip(9)->limit(9)->get();
-               @endphp
-
-               @if(isset($department2))
-               @foreach($department2 as $d)
-               <li><a href="{{ url('department_teacher/'.$d->id) }}">@if($lang == 'en'){{$d->department}}@elseif($lang == 'bn'){{$d->department_name_bn}}@endif</a></li>
-
-               @endforeach
-               @endif
-
-
-               <li><a href="{{ url('staffinfo') }}">@lang('frontend.staffinfo')</a></li>
-
-            </div>
-            @endif
-               @else
-               <div class="col-12">
-
-                    <li><a href="{{ url('teacherinfo') }}">@lang('frontend.teacherinfo')</a></li>
-                    <li><a href="{{ url('staffinfo') }}">@lang('frontend.staffinfo')</a></li>
-               </div>
-               @endif
-               </div>
-
-             </div>
-           </ul>
-         </li>
-
-         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          @lang('frontend.student')
-         </a>
-         <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
-
-          <div class="col-md-12 col-12 dmenu mt-3">
-
-
-            <li><a href="{{url('gender_wise_student_list')}}">@lang('frontend.class_gender_based_education')</a></li>
-           <li><a href="{{url('section_wise_student_list')}}">@lang('frontend.section_wise_student')</a></li>
-
-
-          {{-- <li><a href="{{url('gender_wise_students')}}">@lang('frontend.class_gender_based_education')</a></li>
-           <li><a href="{{url('section_wise_students')}}">@lang('frontend.section_wise_student')</a></li> --}}
-
-           <li><a href="{{ url('student_attendance') }}">@lang('frontend.student_attendance')</a></li>
-           {{--
-
-            this is from original database
-
-            @php
-            $class = DB::table('addclass')->get();
-           @endphp
-           @if($class)
-           @foreach ($class as $c)
-            @php
-            $check = DB::table('class_wise_student_infos')->where('class_id',$c->id)->count();
-            @endphp
-
-            @if($check > 0)
-           <li><a href="{{url('classWiseStudent')}}/{{$c->id}}">@if($lang == 'en'){{$c->class_name}}@else {{$c->class_name_bn}}@endif</a></li>
-            @endif
-           @endforeach
-           @endif
-           --}}
-
-           {{-- this is from secondary database --}}
-
-           @php
-           $class = DB::connection('mysql_second')->table('add_class')->get();
-           @endphp
-
-                @if($class)
-                @foreach ($class as $c)
-
-                @php
-                $count = DB::connection('mysql_second')->table('running_student_info')->where('class_id',$c->id)->count();
-                @endphp
-
-                @if($count > 0)
-                <li><a href="{{url('class_student_info')}}/{{$c->id}}">{{$c->class_name}}</a></li>
-                @endif
-                @endforeach
-                @endif
-
-         </div>
-       </ul>
-     </li>
-
-
-
-
-     <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          @lang('frontend.academic_information')
-         </a>
-         <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
-
-          <div class="col-md-12 col-12 dmenu mt-3">
-
-           <li><a href="{{ url('page/9') }}">@lang('frontend.rules_regulation')</a></li>
-           <li><a href="{{ url('academiccalenders') }}">@lang('frontend.academiccalenders')</a></li>
-           <li><a href="{{ url('classroutines') }}">@lang('frontend.classroutines')</a></li>
-           <li><a href="{{ url('holidaylists') }}">@lang('frontend.holidaylists')</a></li>
-           <li><a href="{{ url('page/10') }}">@lang('frontend.uniform')</a></li>
-           <li><a href="{{ url('page/11') }}">@lang('frontend.fees')</a></li>
-           <li><a href="{{ url('page/5') }}">@lang('frontend.studentinfochart')</a></li>
-
-
-         </div>
-       </ul>
-     </li>
-
-
-
-
-
-
-
-
-
-
-
-     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      @lang('frontend.co_curricular')
-      </a>
-      <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink" style="min-width: 514px;  max-width:100%;">
-
-        <div class="row">
-            @php
-            use App\Models\CoCurriculamActivity;
-            $first_seven = CoCurriculamActivity::take(7)->get();
-            $last_seven = CoCurriculamActivity::skip(7)->take(7)->get();
-            @endphp
-          <div class="col-md-6 col-12 dmenu mt-3">
-            @if($first_seven)
-            @foreach ($first_seven as $v)
-            <li><a href="{{ url('view_cocurriculam') }}/{{$v->id}}">@if($lang == 'en'){{$v->title ?: $v->title_bn}}@else {{$v->title_bn ?: $v->title}}@endif</a></li>
-            @endforeach
-            @endif
-          </div>
-
-          <div class="col-md-6 col-12 dmenu mt-3">
-            @if($last_seven)
-            @foreach ($last_seven as $v)
-            <li><a href="{{ url('view_cocurriculam') }}/{{$v->id}}">@if($lang == 'en'){{$v->title ?: $v->title_bn}}@else {{$v->title_bn ?: $v->title}}@endif</a></li>
-            @endforeach
-            @endif
-          </div>
-
-
-
-        </div>
-
-
-
-      </ul>
-    </li>
-
-
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        @lang('frontend.admission_information')
-      </a>
-      <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
-
-        <div class="col-md-12 col-12 dmenu mt-3">
-
-         <li><a href="{{ url('admissionInfo/3') }}">@lang('frontend.prospectus')</a></li>
-         <li><a href="{{ url('admissionInfo/2') }}">@lang('frontend.admission_rules')</a></li>
-         <li><a href="{{ url('admissionInfo/4') }}">@lang('frontend.admission_procedure')</a></li>
-         <li><a href="{{ url('admissionInfo/5') }}">@lang('frontend.admission_test_result')</a></li>
-         <li><a href="{{ url('admissionInfo/6') }}">@lang('frontend.admission_test_questions')</a></li>
-
-
-       </div>
-     </ul>
-   </li>
-
-
-   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    @lang('frontend.exam_information')
-    </a>
-    <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink">
-
-      <div class="col-md-12 col-12 dmenu mt-3">
-       <li><a href="{{ url('page/12') }}">@lang('frontend.exam_rules')</a></li>
-       <li><a href="{{ url('examroutines') }}">@lang('frontend.examroutines')</a></li>
-       <li><a href="{{ url('examsyllabus') }}">@lang('frontend.examsyllabus')</a></li>
-       <!--<li><a href="{{ url('examsuggession') }}">@lang('frontend.examsuggession')</a></li>-->
-
-     </div>
-   </ul>
- </li>
-
-
-
-
- <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  @lang('frontend.gallery')
-  </a>
-  <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink" style="min-width: 150px; max-width:100%;">
-
-    <div class="col-md-12 col-12 dmenu mt-3">
-      <li><a href="{{ url('photogallery') }}">@lang('frontend.photogallery')</a></li>
-      <li><a href="{{ url('videogallery') }}">@lang('frontend.videogallery')</a></li>
-    </div>
-  </ul>
-</li>
-
-
-<!--<li class="nav-item">-->
-<!--    <a class="nav-link" href="{{ url('complainbox') }}">@lang('frontend.complainbox')</a>-->
-<!--</li>-->
-
-</ul>
-
-</div>
-</nav>
+     
 
 
 

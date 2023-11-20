@@ -10,6 +10,7 @@ use App\Models\gender_wise;
 use App\Models\section_wise;
 use App\Models\Facility;
 use App\Models\CoCurriculamActivity;
+use App\Models\running_notice;
 use PDF;
 use App;
 
@@ -522,6 +523,13 @@ class FrontendController extends Controller
         $data= gender_wise::get();
 
         return view('frontend.gender_wise_students',compact('data'));
+    }
+	
+	public function runningnoticesdetails($id)
+    {
+        $data= running_notice::find($id);
+
+        return view('frontend.runningnoticesdetails',compact('data'));
     }
 
 	public function section_wise_students()
