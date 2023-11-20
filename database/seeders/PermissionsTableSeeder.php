@@ -2054,6 +2054,116 @@ class PermissionsTableSeeder extends Seeder
                 'updated_at' => '2023-11-09 04:40:01',
                 'deleted_at' => NULL,
             ),
+            185 => 
+            array (
+                'id' => 273,
+                'name' => 'Running Notice List',
+                'parent' => 'Running Notice',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-11-20 10:24:01',
+                'updated_at' => '2023-11-20 10:24:01',
+                'deleted_at' => NULL,
+            ),
+            186 => 
+            array (
+                'id' => 274,
+                'name' => 'Running Notice Create',
+                'parent' => 'Running Notice',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-11-20 10:24:01',
+                'updated_at' => '2023-11-20 10:24:01',
+                'deleted_at' => NULL,
+            ),
+            187 => 
+            array (
+                'id' => 275,
+                'name' => 'Running Notice Edit',
+                'parent' => 'Running Notice',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-11-20 10:24:01',
+                'updated_at' => '2023-11-20 10:24:01',
+                'deleted_at' => NULL,
+            ),
+            188 => 
+            array (
+                'id' => 276,
+                'name' => 'Running Notice Delete',
+                'parent' => 'Running Notice',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-11-20 10:24:01',
+                'updated_at' => '2023-11-20 10:24:01',
+                'deleted_at' => NULL,
+            ),
+            189 => 
+            array (
+                'id' => 277,
+                'name' => 'Running Notice View',
+                'parent' => 'Running Notice',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-11-20 10:24:01',
+                'updated_at' => '2023-11-20 10:24:01',
+                'deleted_at' => NULL,
+            ),
+            190 => 
+            array (
+                'id' => 278,
+                'name' => 'Running Notice Print',
+                'parent' => 'Running Notice',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-11-20 10:24:01',
+                'updated_at' => '2023-11-20 10:24:01',
+                'deleted_at' => NULL,
+            ),
+            191 => 
+            array (
+                'id' => 279,
+                'name' => 'Running Notice Edit_history',
+                'parent' => 'Running Notice',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-11-20 10:24:01',
+                'updated_at' => '2023-11-20 10:24:01',
+                'deleted_at' => NULL,
+            ),
+            192 => 
+            array (
+                'id' => 280,
+                'name' => 'Running Notice Deleted_list',
+                'parent' => 'Running Notice',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-11-20 10:24:01',
+                'updated_at' => '2023-11-20 10:24:01',
+                'deleted_at' => NULL,
+            ),
+            193 => 
+            array (
+                'id' => 281,
+                'name' => 'Running Notice Restore',
+                'parent' => 'Running Notice',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-11-20 10:24:01',
+                'updated_at' => '2023-11-20 10:24:01',
+                'deleted_at' => NULL,
+            ),
+            194 => 
+            array (
+                'id' => 282,
+                'name' => 'Running Notice Permanent_delete',
+                'parent' => 'Running Notice',
+                'guard_name' => 'web',
+                'status' => 1,
+                'created_at' => '2023-11-20 10:24:01',
+                'updated_at' => '2023-11-20 10:24:01',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
