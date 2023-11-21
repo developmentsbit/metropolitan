@@ -181,6 +181,9 @@ right:0;
         .siteNameEst span:first-child{
             font-size: 17px !important;
         }
+        .setting {
+          display: none;
+        }
       }
 
 .btn-success {
@@ -361,7 +364,7 @@ li.slideBox {
         </div>
 
 
-        <div class="col-sm-3 col-12 text-center text-sm-center text-lg-right mt-4">
+        <div class="col-sm-3 col-12 text-center text-sm-center text-lg-right mt-4 setting">
           <div class="phone d-flex">
             <div style="padding-top : 5px;">
             <i class="fa fa-id-card"></i>
@@ -373,7 +376,7 @@ li.slideBox {
           </div>
         </div>
 
-        <div class="col-sm-3 col-12 text-center text-sm-center text-lg-right mt-4">
+        <div class="col-sm-3 col-12 text-center text-sm-center text-lg-right mt-4 setting">
           <div class="phone d-flex">
             <div style="padding-top : 5px;">
             <i class="fa fa-phone-square"></i>
