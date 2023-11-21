@@ -259,10 +259,10 @@ li.slideBox {
 }
 </style>
 
-@if(config('app.locale') == 'en')
+
 <style>
     .container{
-    max-width : 1272px !important;
+    max-width : 1530px !important;
   }
   </style>
 <style>
@@ -274,8 +274,17 @@ li.slideBox {
   }
 
 </style>
+
+@if(config('app.locale') == 'en')
+<style>
+    li.nav-item a {
+      font-weight: bold;
+  }
+
+</style>
 @endif
 
+{{--
 @if(config('app.locale') == 'bn')
 <style>
       .container{
@@ -298,7 +307,7 @@ li.slideBox {
 }
 </style>
 
-@endif
+@endif--}}
 
 
 <body>
@@ -392,7 +401,7 @@ li.slideBox {
       </div><!------------Top Header End---------------->
       
       <!-- Navbar Start -->
-      <nav class="navbar navbar-expand-lg navbar-light btco-hover-menu menubar" style="background: #fff; border-bottom: 1px solid #e5e5e5; padding: 0px; box-shadow: 0 1px 5px -2px #999;border-top: 1px solid #e5e5e5;">
+      <nav class="navbar navbar-expand-lg navbar-light btco-hover-menu menubar" style="background: #fff; border-bottom: 1px solid #fff; padding: 0px; box-shadow: 0 1px 5px -2px #999;border-top: 1px solid #e5e5e5;">
       <a class="navbar-brand d-sm-none d-block" style="color: #000; font-weight: bold;" href="">@lang('frontend.select_menu')</a>
 
         <button  class="navbar-toggler"  uk-toggle="target: #offcanvas-slide" style="background-color: #f4f4f4; color: #fff; padding: 5px 10px;">
