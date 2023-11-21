@@ -401,7 +401,7 @@ li.slideBox {
       </div><!------------Top Header End---------------->
       
       <!-- Navbar Start -->
-      <nav class="navbar navbar-expand-lg navbar-light btco-hover-menu menubar" style="background: #fff; border-bottom: 1px solid #fff; padding: 0px; box-shadow: 0 1px 5px -2px #999;border-top: 1px solid #e5e5e5;">
+      <nav class="navbar navbar-expand-lg navbar-light btco-hover-menu menubar" style="background: #fff; border-bottom: 1px solid #ded2d2; padding: 0px; border-top: 1px solid #e5e5e5;">
       <a class="navbar-brand d-sm-none d-block" style="color: #000; font-weight: bold;" href="">@lang('frontend.select_menu')</a>
 
         <button  class="navbar-toggler"  uk-toggle="target: #offcanvas-slide" style="background-color: #f4f4f4; color: #fff; padding: 5px 10px;">
@@ -738,10 +738,10 @@ li.slideBox {
     </nav>
     
     <div class="col-sm-12">
-      <div class=" bg-light" style="">
+      <div class=" bg-light" style="padding: 8px 4px 2px 5px;">
       <div class="row">
           <div class="col-12 pt-1 scroll">
-            <marquee behavior="scroll" direction="left" style="padding-right: 15px;padding-left: 15px;font-size: 17px;">
+            <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" style="padding-right: 15px;padding-left: 15px;font-size: 17px;">
             @php use App\Models\running_notice; $data= running_notice::limit(3)->get(); @endphp  
             @if(isset($data))
               @foreach($data as $r)

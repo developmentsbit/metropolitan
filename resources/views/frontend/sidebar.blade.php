@@ -126,7 +126,7 @@
 			<li class="list-group-item" id="featureheads">@lang('frontend.fan_page')</li>
 		</ul>
 		<div class="feature">
-			      <iframe src="{{ $setting->page }}" width="250" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+			      <iframe src="{{ $setting->page }}" width="335" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
 
 
