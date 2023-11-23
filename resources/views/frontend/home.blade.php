@@ -289,5 +289,31 @@ $setting = DB::table("setting")->first();
 			</div><!-----------------------End Mainpage---------------------->
 			@include('frontend.sidebar')
 		</div>
+
+		<!-- pop up window -->
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content" style="background: transparent;">
+					<div class="modal-header" style="border: none;padding: 6px 17px 13px 0px;">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body" style="margin-top: -25px;">
+						<a href="#"><img src="https://cambrian.edu.bd/uploads/Cover.png" height="auto" width="100%"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<script>
+		$(window).on('load', function() {
+			$('#exampleModalCenter').modal('show');
+			
+			$(".close").click(function(){
+				$('#exampleModalCenter').modal('hide');
+			});
+		});
+	</script>
         <!-------End Container----------->
 		@endsection
