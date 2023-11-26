@@ -300,7 +300,11 @@ $setting = DB::table("setting")->first();
 						</button>
 					</div>
 					<div class="modal-body" style="margin-top: -25px;">
-						<a href="#"><img src="https://cambrian.edu.bd/uploads/Cover.png" height="auto" width="100%"></a>
+					@if(isset($banner))
+					@foreach($banner as $b)
+					<a href="{{url('about_admission')}}"><img src="{{asset('/assets/images/admission_banner/')}}/{{$b->image}}" height="auto" width="100%"></a>
+					@endforeach
+					@endif
 					</div>
 				</div>
 			</div>
