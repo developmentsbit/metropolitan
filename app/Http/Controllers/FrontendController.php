@@ -11,6 +11,8 @@ use App\Models\section_wise;
 use App\Models\Facility;
 use App\Models\CoCurriculamActivity;
 use App\Models\running_notice;
+use App\Models\about_admission;
+use App\Models\admission_banner;
 use PDF;
 use App;
 
@@ -24,8 +26,9 @@ class FrontendController extends Controller
 		$notice = DB::table("notices")->where("type",1)->limit(6)->orderby('id','DESC')->get();
         $facility = Facility::all();
         $activity = CoCurriculamActivity::all();
+        $banner = admission_banner::all();
         $principals = DB::table('members')->where('type',1)->orWhere('type',6)->get();
-		return view('frontend.home',compact('notice','facility','activity','principals'));
+		return view('frontend.home',compact('notice','facility','activity','banner','principals'));
 
 	}
 
@@ -530,6 +533,13 @@ class FrontendController extends Controller
         $data= running_notice::find($id);
 
         return view('frontend.runningnoticesdetails',compact('data'));
+    }
+	
+	public function about_admission()
+    {
+        $data= about_admission::get();
+
+        return view('frontend.about_admission',compact('data'));
     }
 
 	public function section_wise_students()

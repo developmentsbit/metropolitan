@@ -51,6 +51,8 @@ use App\Http\Controllers\BackupController;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\CoCurriculumActivities;
 use App\Http\Controllers\RunningNoticeController;
+use App\Http\Controllers\AboutAdmissionController;
+use App\Http\Controllers\AdmissionBannerController;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -136,6 +138,8 @@ Route::get('/view_cocurriculam/{id}',[FrontendController::class,'view_cocurricul
 Route::get('/allnotices', [FrontendController::class, 'allnotices']);
 Route::get('/photogallery', [FrontendController::class, 'photogallery']);
 Route::get('/videogallery', [FrontendController::class, 'videogallery']);
+Route::get('/videogallery', [FrontendController::class, 'videogallery']);
+Route::get('/about_admission', [FrontendController::class, 'about_admission']);
 
 Route::get('/noticesdetails/{id}', [FrontendController::class, 'notices']);
 Route::get('/runningnoticesdetails/{id}', [FrontendController::class, 'runningnoticesdetails']);
@@ -290,6 +294,8 @@ Route::group(['middleware' => 'auth'], function () {
         'facilities' => FacilityController::class,
         'co_curriculum_activities' => CoCurriculumActivities::class,
         'running_notice' => RunningNoticeController::class,
+        'aboutadmission' => AboutAdmissionController::class,
+        'admission_banner' => AdmissionBannerController::class,
     ]);
 
     //co-curriculum extra routes;

@@ -259,13 +259,33 @@ li.slideBox {
 }
 </style>
 
+<style>
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #683091;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
 
 <style>
-    .container{
-    max-width : 1530px !important;
-  }
-  </style>
-<style>
+  .container{
+  max-width : 1530px !important;
+}
     li.nav-item a {
       font-size: 12.46px;
       padding: 14px 6px !important;
@@ -313,7 +333,7 @@ li.slideBox {
 <body>
 
 
-
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
 
   <div class="container">
 
@@ -364,7 +384,7 @@ li.slideBox {
           <div class="siteLogo">
             <a href="{{ url('/') }}"><img src="{{ asset($setting->image) }}" class="img-fluid"></a>
           </div>
-          <div class="siteNameEst">
+          <div class="siteNameEst" style="font-family: 'Open Sans', sans-serif !important;">
               <span>@if($lang == 'en'){{ $setting->name }}@else {{$setting->name_bangla}} @endif</span>
               <br>
               <span>
@@ -1100,6 +1120,27 @@ li.slideBox {
     });
   </script>
 
+  <script>
+  // Get the button
+  let mybutton = document.getElementById("myBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
 
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" type="text/javascript" ></script>
 
