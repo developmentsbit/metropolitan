@@ -309,15 +309,5 @@ $setting = DB::table("setting")->first();
 				</div>
 			</div>
 		</div>
-
-	<script>
-		$(window).on('load', function() {
-			$('#exampleModalCenter').modal('show');
-			
-			$(".close").click(function(){
-				$('#exampleModalCenter').modal('hide');
-			});
-		});
-	</script>
         <!-------End Container----------->
 		@endsection

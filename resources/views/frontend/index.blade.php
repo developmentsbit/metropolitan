@@ -1098,6 +1098,18 @@ li.slideBox {
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="{{ asset('/') }}frontend/js/sliderResponsive.js"></script>
 
+  
+
+	<script>
+		$(window).on('load', function() {
+			$('#exampleModalCenter').modal('show');
+			
+			$(".close").click(function(){
+				$('#exampleModalCenter').modal('hide');
+			});
+		});
+	</script>
+
 
   <script>
     $(document).ready(function() {
