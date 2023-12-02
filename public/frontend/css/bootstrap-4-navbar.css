@@ -9,7 +9,7 @@
 .navbar-light .navbar-nav .nav-link {
     color: #000;
     border-right: 1px solid #e5e5e5;
-    padding: 12px 17px !important;
+    padding: 12px 10px !important;
 }
 
 .navbar-light .navbar-nav .nav-link:hover{

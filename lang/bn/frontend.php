@@ -186,6 +186,11 @@ $array = array(
     'present'=>'উপস্থিত শিক্ষার্থীর সংখ্যা',
     'absent'=>'উপস্থিত শিক্ষার্থীর সংখ্যা',
     'search'=>'সার্চ করুন',
+    'digital_content_subject'=>'বিষয় অনুযায়ী ডিজিটাল কন্টেন্ট',
+    'digital_content'=>'ডিজিটাল কন্টেন্ট সমূহ',
+    'subject_name'=>'বিষয়ের নাম',
+    'teacher_name'=>'শিক্ষকের নাম',
+    'detail'=>'বিস্তারিত',
 
 
     //tanim

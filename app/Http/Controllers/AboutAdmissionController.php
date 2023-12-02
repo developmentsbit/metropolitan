@@ -63,7 +63,7 @@ class AboutAdmissionController extends Controller
         {
             $imageName = rand().'.'.$file->getClientOriginalExtension();
 
-            $file->move(public_path().'/assets/images/about_admission/',$imageName);
+            $file->move(public_path().'/assets/images/aboutadmission/',$imageName);
 
             $data['image'] = $imageName;
 
@@ -96,7 +96,17 @@ class AboutAdmissionController extends Controller
      */
     public function edit(string $id)
     {
+<<<<<<< HEAD
+        $data = about_admission::find($id);
+
+        $explode = explode('-',$data->date);
+
+        $date = $explode['1'].'/'.$explode['2'].'/'.$explode[0];
+
+        return view('admin.aboutadmission.edit',compact('data','date'));
+=======
         //
+>>>>>>> 3967749d178828b12fc2899abec5cc1c9b6f178a
     }
 
     /**
@@ -104,7 +114,53 @@ class AboutAdmissionController extends Controller
      */
     public function update(Request $request, string $id)
     {
+<<<<<<< HEAD
+        $file = $request->file('image');
+
+        if($file)
+        {
+            $pathImage = about_admission::find($id);
+
+            $path = public_path().'/assets/images/aboutadmission/'.$pathImage->image;
+
+            if(file_exists($path))
+            {
+                unlink($path);
+            }
+
+        }
+
+        if($file)
+        {
+            $imageName = rand().'.'.$file->getClientOriginalExtension();
+
+            $file->move(public_path().'/assets/images/aboutadmission/',$imageName);
+
+            about_admission::where('id',$id)->update(['image'=>$imageName]);
+
+        }
+
+        $date = $this->getDate('/',$request->date);
+
+        $update = about_admission::find($id)->update([
+            'date'=>$date,
+            'title'=>$request->title,
+            'title_bn'=>$request->title_bn,
+        ]);
+
+        if($update)
+        {
+            Toastr::success('Data Update Success', 'success');
+            return redirect(route('aboutadmission.index'));
+        }
+        else
+        {
+            Toastr::error('Data Update Error', 'success');
+            return redirect(route('aboutadmission.index'));
+        }
+=======
         //
+>>>>>>> 3967749d178828b12fc2899abec5cc1c9b6f178a
     }
 
     /**

@@ -118,9 +118,10 @@ class SectionController extends Controller
 public function getgroup($class_id){
 
     $group  = DB::table("addgroup")->where("class_id",$class_id)->where("status",1)->get();
-
-    if($group)
+    $output='';
+    if(count($group) > 0)
     {
+        $output .='<option>-- Select One --</option>';
         foreach($group as $v)
         {
             if(config('app.locale') == 'en')
@@ -131,9 +132,11 @@ public function getgroup($class_id){
             {
                 $group_name = $v->group_name_bn;
             }
-            echo "<option value='".$v->id."'>".$group_name."</option>";
+            $output.= "<option value='".$v->id."'>".$group_name."</option>";
         }
     }
+
+    return $output;
 
 }
 

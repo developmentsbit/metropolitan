@@ -64,7 +64,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 							<td>@if($lang == 'en'){{ $d->title ?: $d->title_bn}} @else {{$d->title_bn ?: $d->title}}@endif</td>
 							<td>
 								@if($d->image)
-								  <img src="{{asset('/assets/images/about_admission')}}/{{$d->image}}" class="img-fluid" style="max-height: 50px;">
+								  <img src="{{asset('/assets/images/aboutadmission')}}/{{$d->image}}" class="img-fluid" style="max-height: 50px;">
 								@endif
 							</td>
 							<td>

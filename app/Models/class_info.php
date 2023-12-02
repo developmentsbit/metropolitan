@@ -9,5 +9,7 @@ class class_info extends Model
 {
     use HasFactory;
 
+    protected $table = 'addclass';
+
     protected $guarded = [];
 }

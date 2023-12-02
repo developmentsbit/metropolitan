@@ -290,7 +290,6 @@ li.slideBox {
       font-size: 12.46px;
       padding: 14px 6px !important;
       text-transform: capitalize;
-      font-weight: bold;
   }
 
 </style>
@@ -747,6 +746,27 @@ li.slideBox {
         </div>
         </ul>
         </li>
+        
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        @lang('frontend.digital_content')
+        </a>
+        <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink" style="min-width: 150px; max-width:100%;">
+
+        <div class="col-md-12 col-12 dmenu mt-3">
+            @php
+            use App\Models\class_info;
+            $data = class_info::all()
+            @endphp
+            
+            @if($data)
+            @foreach ($data as $c)
+            <li><a href="{{ url('digitalContent') }}/{{$c->id}}">@if($lang == 'en'){{ $c->class_name ?: $c->class_name_bn}}@else {{$c->class_name_bn ?: $c->class_name}}@endif</a></li>
+            @endforeach
+            @endif
+          </div>
+        </ul>
+        </li>
 
 
         <!--<li class="nav-item">-->
@@ -1027,6 +1047,17 @@ li.slideBox {
   </ul>
 </li>
 
+<<<<<<< HEAD
+<li class="uk-parent">
+  <a href="#"><span uk-icon="icon: chevron-right; ratio: 0.9"></span>&nbsp;&nbsp;@lang('frontend.digital_content')</a>
+  <ul class="uk-nav-sub">
+    <li><a href="{{ url('photogallery') }}">@lang('frontend.photogallery')</a></li>
+    <li><a href="{{ url('videogallery') }}">@lang('frontend.videogallery')</a></li>
+  </ul>
+</li>
+
+=======
+>>>>>>> 3967749d178828b12fc2899abec5cc1c9b6f178a
 <!--<li class="nav-item">-->
 <!--    <a class="nav-link" href="{{ url('complainbox') }}">@lang('frontend.complainbox')</a>-->
 <!--</li>-->
@@ -1165,5 +1196,12 @@ li.slideBox {
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<<<<<<< HEAD
+
+
+  <!-- pop up window -->
+ 
+=======
+>>>>>>> 3967749d178828b12fc2899abec5cc1c9b6f178a
 </body>
 </html>

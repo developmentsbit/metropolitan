@@ -22,7 +22,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 <div class="container mt-2">
 		@component('components.breadcrumb')
             @slot('title')
-                @lang('page.viewtitle')
+                @lang('digital_content.viewtitle')
             @endslot
             @slot('breadcrumb1')
                 @lang('common.dashboard')
@@ -35,7 +35,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
                     @lang('common.add_new')
                 @endslot
                 @slot('action_button1_link')
-                    {{ route('pages.create') }}
+                    {{ route('digital_content.create') }}
                 @endslot
             @endif
             @slot('action_button1_class')
@@ -47,57 +47,46 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 		<div class="card">
 			<div class="card-body">
 
-				<h3>@lang('page.viewtitle')</h3><br>
+				<h3>@lang('digital_content.managetitle')</h3><br>
 
 				<table id="datatable-buttons" class="table table-striped dt-responsive nowrap w-100">
 					<thead class="mythead">
 						<tr>
-							<th>@lang('page.sl')</th>
-							<th>@lang('page.title')</th>
+							<th>#</th>
+							<th>@lang('digital_content.classname')</th>
+							<th>@lang('digital_content.groupname')</th>
+							<th>@lang('digital_content.subject_name')</th>
+							<th>@lang('digital_content.teacher_name')</th>
+							<th>@lang('digital_content.title')</th>
 							<th>@lang('common.action')</th>
 						</tr>
 					</thead>
-
-
 					<tbody class="tbody" id="showtdata">
 						@php $i=1;  @endphp
 						@if(isset($data))
 						@foreach($data as $d)
 						<tr id="tr{{ $d->id }}">
 							<td>{{ $i++ }}</td>
-							<td>@if($lang == 'en'){{ $d->title ?: $d->title_bn}} @else {{$d->title_bn ?: $d->title}}@endif</td>
+							<td>@if($lang == 'en'){{ $d->class_name ?: $d->class_name_bn}}@else {{$d->class_name_bn ?: $d->class_name}}@endif</td>
+							<td>@if($lang == 'en'){{ $d->group_name ?: $d->group_name_bn}}@else {{$d->group_name_bn ?: $d->group_name}}@endif</td>
+							<td>@if($lang == 'en'){{ $d->subject_name_en ?: $d->subject_name_bn}}@else {{$d->subject_name_bn ?: $d->subject_name_en}}@endif</td>
+							<td>@if($lang == 'en'){{ $d->teacher_name ?: $d->teacher_name_bn}}@else {{$d->teacher_name_bn ?: $d->teacher_name}}@endif</td>
+							<td>@if($lang == 'en'){{ $d->title ?: $d->title_bn}}@else {{$d->title_bn ?: $d->title}}@endif</td>
 							<td>
 								<div class="btn-group">
-									<a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="{{ route("pages.edit",$d->id) }}">@lang('common.edit')</a>
-<<<<<<< HEAD
-									{{--<form action="{{ route('pages.destroy',$d->id) }}" method="post">
-=======
-									<form action="{{ route('pages.destroy',$d->id) }}" method="post">
->>>>>>> 3967749d178828b12fc2899abec5cc1c9b6f178a
+									<a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="{{ route("digital_content.edit",$d->id) }}">@lang('common.edit')</a>
+									<form action="{{ route('digital_content.destroy',$d->id) }}" method="post">
 										@csrf
 										@method('DELETE')
 										<button type="submit" class="btn btn-danger" onClick="return confirm('Are You Sure?')">@lang('common.delete')</button>
-
-<<<<<<< HEAD
-									</form>--}}
-=======
 									</form>
->>>>>>> 3967749d178828b12fc2899abec5cc1c9b6f178a
 								</div>
 							</td>
-
 						</tr>
 						@endforeach
 						@endif
-
-
 					</tbody>
 				</table>
-
-
-
-
-
 			</div> <!-- end card body-->
 		</div> <!-- end card -->
 	</div><!-- end col-->

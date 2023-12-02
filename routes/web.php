@@ -53,6 +53,8 @@ use App\Http\Controllers\CoCurriculumActivities;
 use App\Http\Controllers\RunningNoticeController;
 use App\Http\Controllers\AboutAdmissionController;
 use App\Http\Controllers\AdmissionBannerController;
+use App\Http\Controllers\AddSubjectController;
+use App\Http\Controllers\DigitalContentController;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -143,6 +145,9 @@ Route::get('/about_admission', [FrontendController::class, 'about_admission']);
 
 Route::get('/noticesdetails/{id}', [FrontendController::class, 'notices']);
 Route::get('/runningnoticesdetails/{id}', [FrontendController::class, 'runningnoticesdetails']);
+Route::get('/digitalContent/{id}', [FrontendController::class, 'digitalContent']);
+Route::get('/content_details/{id}', [FrontendController::class, 'content_details']);
+Route::get('/digitalcontentdetails/{sub_id}/{class_id}', [FrontendController::class, 'digitalcontentdetails']);
 Route::get('/events', [FrontendController::class, 'events']);
 
 
@@ -296,7 +301,12 @@ Route::group(['middleware' => 'auth'], function () {
         'running_notice' => RunningNoticeController::class,
         'aboutadmission' => AboutAdmissionController::class,
         'admission_banner' => AdmissionBannerController::class,
+        'add_subject' => AddSubjectController::class,
+        'digital_content' => DigitalContentController::class,
     ]);
+
+    Route::post('loadClassSubject',[DigitalContentController::class,'loadClassSubject']);
+    Route::post('getGroupSubject',[DigitalContentController::class,'getGroupSubject']);
 
     //co-curriculum extra routes;
 

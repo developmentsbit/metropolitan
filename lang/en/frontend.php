@@ -179,6 +179,10 @@ $array = array(
     'present'=>'Present Student',
     'absent'=>'Absent Student',
     'search'=>'Search',
+    'digital_content_subject'=>'Subjects Wise Digital Content',
+    'digital_content'=>'Digital Contents',
+    'subject_name'=>'Subject Name',
+    'teacher_name'=>'Teacher Name',
 
 
     //tanim

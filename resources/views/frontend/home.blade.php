@@ -290,7 +290,13 @@ $setting = DB::table("setting")->first();
 			@include('frontend.sidebar')
 		</div>
 
-		<!-- pop up window -->
+		
+        <!-------End Container----------->
+		@endsection
+
+
+		@if(isset($banner))
+		@foreach($banner as $b)
 		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered" role="document">
 				<div class="modal-content" style="background: transparent;">
@@ -300,14 +306,10 @@ $setting = DB::table("setting")->first();
 						</button>
 					</div>
 					<div class="modal-body" style="margin-top: -25px;">
-					@if(isset($banner))
-					@foreach($banner as $b)
-					<a href="{{url('about_admission')}}"><img src="{{asset('/assets/images/admission_banner/')}}/{{$b->image}}" height="auto" width="100%"></a>
-					@endforeach
-					@endif
+						<a href="{{url('about_admission')}}"><img src="{{asset('/assets/images/admission_banner/')}}/{{$b->image}}" height="auto" width="100%"></a>
 					</div>
 				</div>
 			</div>
 		</div>
-        <!-------End Container----------->
-		@endsection
+		@endforeach
+		@endif

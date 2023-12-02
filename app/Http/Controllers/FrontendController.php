@@ -13,6 +13,10 @@ use App\Models\CoCurriculamActivity;
 use App\Models\running_notice;
 use App\Models\about_admission;
 use App\Models\admission_banner;
+use App\Models\class_info;
+use App\Models\group_info;
+use App\Models\add_subject;
+use App\Models\digital_content;
 use PDF;
 use App;
 
@@ -43,6 +47,43 @@ class FrontendController extends Controller
     {
         $data = CoCurriculamActivity::find($id);
         return view('frontend.view_cocurriculam',compact('data'));
+    }
+    
+	public function digitalContent($id)
+    {
+        $data = add_subject::leftjoin("addclass",'addclass.id','add_subjects.class_id')
+        ->leftjoin("addgroup",'addgroup.id','add_subjects.group_id')
+        ->select("add_subjects.*",'addclass.class_name','addgroup.group_name','addclass.class_name_bn','addgroup.group_name_bn')
+		->where('add_subjects.class_id',$id)
+        ->get();
+
+		$class_id = $id;
+
+        return view('frontend.digitalContent',compact('data','class_id'));
+    }
+	
+	public function content_details($id)
+    {
+		$data = digital_content::leftjoin("addclass",'addclass.id','digital_contents.class_id')
+        ->leftjoin("addgroup",'addgroup.id','digital_contents.group_id')
+        ->leftjoin("add_subjects",'add_subjects.id','digital_contents.subject_id')
+        ->select("digital_contents.*",'addclass.class_name','addgroup.group_name','add_subjects.subject_name_bn','addclass.class_name_bn','addgroup.group_name_bn','add_subjects.subject_name_en')
+		->where('digital_contents.subject_id',$id)
+        ->get();
+
+        return view('frontend.content_details',compact('data'));
+    }
+	
+	public function digitalcontentdetails($sub_id,$class_id)
+    {
+        $data = digital_content::leftjoin("addclass",'addclass.id','digital_contents.class_id')
+        ->leftjoin("add_subjects",'add_subjects.id','digital_contents.subject_id')
+        ->select("digital_contents.*",'addclass.class_name','add_subjects.subject_name_bn','addclass.class_name_bn','add_subjects.subject_name_en')
+		->where('digital_contents.class_id',$class_id)
+		->where('digital_contents.subject_id',$sub_id)
+        ->first();
+
+        return view('frontend.digitalcontentdetails',compact('data'));
     }
 
 	public function teacher_permission()
