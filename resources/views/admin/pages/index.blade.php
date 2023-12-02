@@ -69,12 +69,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 							<td>
 								<div class="btn-group">
 									<a  class="btn btn-info border-0 edit text-light" data-toggle="modal" data-target="#exampleModalCenters" href="{{ route("pages.edit",$d->id) }}">@lang('common.edit')</a>
+<<<<<<< HEAD
 									{{--<form action="{{ route('pages.destroy',$d->id) }}" method="post">
+=======
+									<form action="{{ route('pages.destroy',$d->id) }}" method="post">
+>>>>>>> 3967749d178828b12fc2899abec5cc1c9b6f178a
 										@csrf
 										@method('DELETE')
 										<button type="submit" class="btn btn-danger" onClick="return confirm('Are You Sure?')">@lang('common.delete')</button>
 
+<<<<<<< HEAD
 									</form>--}}
+=======
+									</form>
+>>>>>>> 3967749d178828b12fc2899abec5cc1c9b6f178a
 								</div>
 							</td>
 

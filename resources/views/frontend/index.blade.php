@@ -1047,6 +1047,7 @@ li.slideBox {
   </ul>
 </li>
 
+<<<<<<< HEAD
 <li class="uk-parent">
   <a href="#"><span uk-icon="icon: chevron-right; ratio: 0.9"></span>&nbsp;&nbsp;@lang('frontend.digital_content')</a>
   <ul class="uk-nav-sub">
@@ -1055,6 +1056,8 @@ li.slideBox {
   </ul>
 </li>
 
+=======
+>>>>>>> 3967749d178828b12fc2899abec5cc1c9b6f178a
 <!--<li class="nav-item">-->
 <!--    <a class="nav-link" href="{{ url('complainbox') }}">@lang('frontend.complainbox')</a>-->
 <!--</li>-->
@@ -1193,9 +1196,12 @@ li.slideBox {
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<<<<<<< HEAD
 
 
   <!-- pop up window -->
  
+=======
+>>>>>>> 3967749d178828b12fc2899abec5cc1c9b6f178a
 </body>
 </html>
