@@ -750,9 +750,9 @@ li.slideBox {
         <div class="col-md-12 col-12 dmenu mt-3">
           @php
           use App\Models\digital_content;
-          $data = digital_content::join('addClass','addClass.id','digital_contents.class_id')
+          $data = digital_content::join('addclass','addclass.id','digital_contents.class_id')
                   ->groupBy('digital_contents.class_id')
-                  ->select('addClass.*')
+                  ->select('addclass.*')
                   ->get();
           @endphp
             
@@ -1050,9 +1050,9 @@ li.slideBox {
   <a href="#"><span uk-icon="icon: chevron-right; ratio: 0.9"></span>&nbsp;&nbsp;@lang('frontend.digital_content')</a>
   <ul class="uk-nav-sub">
     @php
-    $data = digital_content::join('addClass','addClass.id','digital_contents.class_id')
+    $data = digital_content::join('addclass','addclass.id','digital_contents.class_id')
             ->groupBy('digital_contents.class_id')
-            ->select('addClass.*')
+            ->select('addclass.*')
             ->get();
     @endphp
     
