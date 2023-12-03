@@ -272,9 +272,9 @@ $setting = DB::table("setting")->first();
 									<div class="col-sm-9 col-9 p-0">
 										@php
 										use App\Models\digital_content;
-										$data = digital_content::join('addClass','addClass.id','digital_contents.class_id')
+										$data = digital_content::join('addclass','addclass.id','digital_contents.class_id')
 											->groupBy('digital_contents.class_id')
-											->select('addClass.*')
+											->select('addclass.*')
 											->get();
 										@endphp
 										<ul class="menus">
