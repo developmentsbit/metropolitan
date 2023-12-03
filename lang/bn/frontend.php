@@ -191,6 +191,8 @@ $array = array(
     'subject_name'=>'বিষয়ের নাম',
     'teacher_name'=>'শিক্ষকের নাম',
     'detail'=>'বিস্তারিত',
+    'exprinicipal'=>'মেট্রোপলিটনের প্রাক্তন অধ্যক্ষ',
+    'exviceprinicipal'=>'মেট্রোপলিটনের প্রাক্তন উপাধ্যক্ষ',
 
 
     //tanim

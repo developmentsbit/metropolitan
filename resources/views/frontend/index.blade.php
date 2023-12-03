@@ -290,18 +290,10 @@ li.slideBox {
       font-size: 12.46px;
       padding: 14px 6px !important;
       text-transform: capitalize;
-  }
-
-</style>
-
-@if(config('app.locale') == 'en')
-<style>
-    li.nav-item a {
       font-weight: bold;
   }
 
 </style>
-@endif
 
 {{--
 @if(config('app.locale') == 'bn')
@@ -443,20 +435,20 @@ li.slideBox {
                 <div class="row">
 
                   <div class="col-md-6 col-12 dmenu mt-3">
-                    <li><a href="{{ url('page/1') }}">@lang('frontend.about_us')</a></li>
-                    <li><a href="{{ url('page/2') }}">@lang('frontend.mission_vision')</a></li>
-                    <li><a href="{{ url('page/3') }}">@lang('frontend.history')</a></li>
-                    <li><a href="{{ url('page/4') }}">@lang('frontend.citizen_charter')</a></li>
+                    <li><a style="padding: 14px 15px !important;" href="{{ url('page/1') }}">@lang('frontend.about_us')</a></li>
+                    <li><a style="padding: 14px 15px !important;" href="{{ url('page/2') }}">@lang('frontend.mission_vision')</a></li>
+                    <li><a style="padding: 14px 15px !important;" href="{{ url('page/3') }}">@lang('frontend.history')</a></li>
+                    <li><a style="padding: 14px 15px !important;" href="{{ url('page/4') }}">@lang('frontend.citizen_charter')</a></li>
 
-                    <li><a href="{{url('teacher_permission')}}">@lang('frontend.teaching_permission_recognition')</a></li>
-                    <li><a href="{{url('mpo_nationalizations')}}">@lang('frontend.mpo_nationalization_info')</a></li>
+                    <li><a style="padding: 14px 15px !important;" href="{{url('teacher_permission')}}">@lang('frontend.teaching_permission_recognition')</a></li>
+                    <li><a style="padding: 14px 15px !important;" href="{{url('mpo_nationalizations')}}">@lang('frontend.mpo_nationalization_info')</a></li>
 
                   </div>
 
                   <div class="col-md-6 col-12 dmenu mt-3">
-                    <li><a href="{{ url('page/6') }}">@lang('frontend.infrastructure')</a></li>
-                    <li><a href="{{ url('page/7') }}">@lang('frontend.yearly_working_plan') </a></li>
-                    <li><a href="{{ url('page/8') }}">@lang('frontend.contact')</a></li>
+                    <li><a style="padding: 14px 15px !important;" href="{{ url('page/6') }}">@lang('frontend.infrastructure')</a></li>
+                    <li><a style="padding: 14px 15px !important;" href="{{ url('page/7') }}">@lang('frontend.yearly_working_plan') </a></li>
+                    <li><a style="padding: 14px 15px !important;" href="{{ url('page/8') }}">@lang('frontend.contact')</a></li>
                   </div>
 
 
@@ -493,8 +485,10 @@ li.slideBox {
 
                 <li><a href="{{ url('donar') }}">@lang('frontend.donar')</a></li>
                 <li><a href="{{ url('ex_member') }}">@lang('frontend.ex_member')</a></li> --}}
-                <li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
-                <li><a href="{{ url('viceprinciples') }}">@lang('frontend.viceprinciples')</a></li>
+                {{--<li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
+                <li><a href="{{ url('viceprinciples') }}">@lang('frontend.viceprinciples')</a></li>--}}
+                <li><a href="{{ url('exmetropolitanprincipal') }}">@lang('frontend.exprinicipal')</a></li>
+                <li><a href="{{ url('exmetropolitanviceprincipal') }}">@lang('frontend.exviceprinicipal')</a></li>
               </div>
             </ul>
           </li>
@@ -672,7 +666,7 @@ li.slideBox {
           <div class="col-md-6 col-12 dmenu mt-3">
             @if($first_seven)
             @foreach ($first_seven as $v)
-            <li><a href="{{ url('view_cocurriculam') }}/{{$v->id}}">@if($lang == 'en'){{$v->title ?: $v->title_bn}}@else {{$v->title_bn ?: $v->title}}@endif</a></li>
+            <li><a style="padding: 14px 15px !important;" href="{{ url('view_cocurriculam') }}/{{$v->id}}">@if($lang == 'en'){{$v->title ?: $v->title_bn}}@else {{$v->title_bn ?: $v->title}}@endif</a></li>
             @endforeach
             @endif
           </div>
@@ -680,7 +674,7 @@ li.slideBox {
           <div class="col-md-6 col-12 dmenu mt-3">
             @if($last_seven)
             @foreach ($last_seven as $v)
-            <li><a href="{{ url('view_cocurriculam') }}/{{$v->id}}">@if($lang == 'en'){{$v->title ?: $v->title_bn}}@else {{$v->title_bn ?: $v->title}}@endif</a></li>
+            <li><a style="padding: 14px 15px !important;" href="{{ url('view_cocurriculam') }}/{{$v->id}}">@if($lang == 'en'){{$v->title ?: $v->title_bn}}@else {{$v->title_bn ?: $v->title}}@endif</a></li>
             @endforeach
             @endif
           </div>
@@ -918,8 +912,10 @@ li.slideBox {
 
         @if($setting->type == 'college' || $setting->type == 'madrasah')
         <li><a href="{{ url('vice_principal_messages') }}">@lang('frontend.vicepresidentmessage') </a></li>
-        <li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
-        <li><a href="{{ url('viceprinciples') }}">@lang('frontend.viceprinciples')</a></li>
+        {{--<li><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
+        <li><a href="{{ url('viceprinciples') }}">@lang('frontend.viceprinciples')</a></li>--}}
+        <li><a href="{{ url('exmetropolitanprincipal') }}">@lang('frontend.exprinicipal')</a></li>
+        <li><a href="{{ url('exmetropolitanviceprincipal') }}">@lang('frontend.exviceprinicipal')</a></li>
         @endif
       </ul>
     </li>
@@ -1047,17 +1043,21 @@ li.slideBox {
   </ul>
 </li>
 
-<<<<<<< HEAD
 <li class="uk-parent">
   <a href="#"><span uk-icon="icon: chevron-right; ratio: 0.9"></span>&nbsp;&nbsp;@lang('frontend.digital_content')</a>
   <ul class="uk-nav-sub">
-    <li><a href="{{ url('photogallery') }}">@lang('frontend.photogallery')</a></li>
-    <li><a href="{{ url('videogallery') }}">@lang('frontend.videogallery')</a></li>
+    @php
+    $data = class_info::all()
+    @endphp
+    
+    @if($data)
+    @foreach ($data as $c)
+    <li><a href="{{ url('digitalContent') }}/{{$c->id}}">@if($lang == 'en'){{ $c->class_name ?: $c->class_name_bn}}@else {{$c->class_name_bn ?: $c->class_name}}@endif</a></li>
+    @endforeach
+    @endif           
   </ul>
 </li>
 
-=======
->>>>>>> 3967749d178828b12fc2899abec5cc1c9b6f178a
 <!--<li class="nav-item">-->
 <!--    <a class="nav-link" href="{{ url('complainbox') }}">@lang('frontend.complainbox')</a>-->
 <!--</li>-->
@@ -1196,12 +1196,6 @@ li.slideBox {
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-<<<<<<< HEAD
-
-
-  <!-- pop up window -->
  
-=======
->>>>>>> 3967749d178828b12fc2899abec5cc1c9b6f178a
 </body>
 </html>

@@ -261,6 +261,24 @@ $setting = DB::table("setting")->first();
 						</div><!-------------------------End Card----------------------->
 						<div class="col-sm-6 col-12 ">
 							<div class="col-sm-12 col-12 pt-3 pb-2" id="cart" data-aos="fade-in" data-aos-duration="1000" >
+								<p class="session">&nbsp;&nbsp;@lang('frontend.digital_content')</p>
+								<div class="row">
+									<div class="col-sm-3 col-3">
+										<img src="{{ asset('/') }}frontend/img/7.jpg" class="img-fluid" id="iconss">
+									</div>
+
+									<div class="col-sm-9 col-9 p-0">
+										<ul class="menus">
+
+											<li><i class="fa fa-caret-right"></i><a href="{{ url('/photogallery') }}">@lang('frontend.photogallery')</a></li>
+											<li><i class="fa fa-caret-right"></i><a href="{{ url('/videogallery') }}">@lang('frontend.videogallery')</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div><!-------------------------End Card----------------------->
+						<div class="col-sm-6 col-12 ">
+							<div class="col-sm-12 col-12 pt-3 pb-2" id="cart" data-aos="fade-in" data-aos-duration="1000" >
 								<p class="session">&nbsp;&nbsp;@lang('frontend.others')</p>
 								<div class="row">
 									<div class="col-sm-3 col-3">
@@ -294,7 +312,8 @@ $setting = DB::table("setting")->first();
         <!-------End Container----------->
 		@endsection
 
-
+		<!-- pop up window -->
+		
 		@if(isset($banner))
 		@foreach($banner as $b)
 		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

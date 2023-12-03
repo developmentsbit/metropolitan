@@ -183,6 +183,9 @@ $array = array(
     'digital_content'=>'Digital Contents',
     'subject_name'=>'Subject Name',
     'teacher_name'=>'Teacher Name',
+    'detail'=>'Details',
+    'exprinicipal'=>'Former Principal of Metropolitan',
+    'exviceprinicipal'=>'Former Vice Principal of Metropolitan',
 
 
     //tanim

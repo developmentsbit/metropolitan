@@ -12,7 +12,8 @@
                         </ul>
                         <li class="list-group-item">
                             <div class="table table-responsive">
-                            <iframe src="{{asset('assets/files/digital_content')}}/{{$data->file}}" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                            <!-- <iframe src="{{asset('assets/files/digital_content')}}/{{$data->file}}" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> -->
+                            <a href="{{asset('assets/files/digital_content')}}/{{$data->file}}"><img src="{{asset('assets/files/digital_content')}}/{{$data->file}}" alt="" class="img-fluid" style="width: 400px;height: auto;border: 2px solid #fff;"></a>
                             <!-- {{asset('assets/files/digital_content')}}/{{$data->file}} -->
 								<!-- <iframe class="margin-top10" src="{{asset('assets/files/digital_content')}}/{{$data->file}}" frameborder="0" width="720" height="434" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">00</iframe> -->
                                 <hr>

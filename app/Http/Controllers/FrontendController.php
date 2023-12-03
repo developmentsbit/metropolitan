@@ -17,6 +17,7 @@ use App\Models\class_info;
 use App\Models\group_info;
 use App\Models\add_subject;
 use App\Models\digital_content;
+use App\Models\ex_Principal_vice_principal;
 use PDF;
 use App;
 
@@ -90,6 +91,24 @@ class FrontendController extends Controller
 	{
 		$data = teaching_permission::get();
 		return view('frontend.teacher_permission',compact('data'));
+	}
+	
+	public function exmetropolitanprincipal()
+	{
+		$data = ex_Principal_vice_principal::where('status',1)->where('type',1)->get();
+		return view('frontend.exmetropolitanprincipal',compact('data'));
+	}
+	
+	public function exmetropolitanviceprincipal()
+	{
+		$data = ex_Principal_vice_principal::where('status',1)->where('type',2)->get();
+		return view('frontend.exmetropolitanprincipal',compact('data'));
+	}
+	
+	public function exprincipalviceprincipaldetails($id)
+	{
+		$data = ex_Principal_vice_principal::where('id',$id)->first();
+		return view('frontend.exprincipalviceprincipaldetails',compact('data'));
 	}
 
 	public function mpo_nationalizations()
