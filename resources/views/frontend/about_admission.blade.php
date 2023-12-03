@@ -23,7 +23,7 @@
           @foreach($data as $d)
 
          <div class="col-sm-3 col-12 p-0">
-           <a href="{{asset('/assets/images/about_admission')}}/{{$d->image}}"><img src="{{asset('/assets/images/about_admission')}}/{{$d->image}}" alt="" class="img-fluid photoimg" style="width: 400px;height: auto;border: 2px solid #fff;"></a>
+           <a href="{{asset('/assets/images/aboutadmission')}}/{{$d->image}}"><img src="{{asset('/assets/images/aboutadmission')}}/{{$d->image}}" alt="" class="img-fluid photoimg" style="width: 400px;height: auto;border: 2px solid #fff;"></a>
          </div>
 
 

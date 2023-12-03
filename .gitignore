@@ -58,6 +58,8 @@ public/admin/student_attendance_info
 public/admin/teaching_permission
 public/assets/images/gender_wise
 public/assets/images/section_wise
+public/assets/images/aboutadmission
+public/assets/images/ex_Principal_vice_principal
 
 # result/db_connect/conect.php
 

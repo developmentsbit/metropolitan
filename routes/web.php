@@ -55,6 +55,7 @@ use App\Http\Controllers\AboutAdmissionController;
 use App\Http\Controllers\AdmissionBannerController;
 use App\Http\Controllers\AddSubjectController;
 use App\Http\Controllers\DigitalContentController;
+use App\Http\Controllers\ExprinicipalViceprincipalController;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -101,6 +102,9 @@ Route::get('/mpo_nationalizations', [FrontendController::class, 'mpo_nationaliza
 Route::get('/principal_message', [FrontendController::class, 'principle_message']);
 Route::get('/vice_principal_messages', [FrontendController::class, 'vice_principal_message']);
 Route::get('/presidentmessage', [FrontendController::class, 'presidentmessage']);
+Route::get('/exmetropolitanprincipal', [FrontendController::class, 'exmetropolitanprincipal']);
+Route::get('/exmetropolitanviceprincipal', [FrontendController::class, 'exmetropolitanviceprincipal']);
+Route::get('/exprincipalviceprincipaldetails/{id}', [FrontendController::class, 'exprincipalviceprincipaldetails']);
 
 Route::get('/managing_comitte', [FrontendController::class, 'managing_comitte']);
 Route::get('/presidents', [FrontendController::class, 'presidents']);
@@ -303,6 +307,7 @@ Route::group(['middleware' => 'auth'], function () {
         'admission_banner' => AdmissionBannerController::class,
         'add_subject' => AddSubjectController::class,
         'digital_content' => DigitalContentController::class,
+        'ex_Principal_vice_principal' => ExprinicipalViceprincipalController::class,
     ]);
 
     Route::post('loadClassSubject',[DigitalContentController::class,'loadClassSubject']);

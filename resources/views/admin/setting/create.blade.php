@@ -150,7 +150,7 @@
 								<textarea  class="form-control w-100" rows="5" type="text" name="address_bangla">{{ $data->address_bangla }}</textarea>
 							</div>
 						</div>
-						<div class="form-group mb-3 col-md-12">
+						<div class="form-group mb-3 col-md-12" hidden>
 							<label>@lang('setting.type'):</label>
 							<div class="input-group mt-2">
 								<select class="form-control" name="type">
