@@ -263,33 +263,6 @@ $setting = DB::table("setting")->first();
 						</div><!-------------------------End Card----------------------->
 						<div class="col-sm-6 col-12 ">
 							<div class="col-sm-12 col-12 pt-3 pb-2" id="cart" data-aos="fade-in" data-aos-duration="1000" >
-								<p class="session">&nbsp;&nbsp;@lang('frontend.digital_content')</p>
-								<div class="row">
-									<div class="col-sm-3 col-3">
-										<img src="{{ asset('/') }}frontend/img/7.jpg" class="img-fluid" id="iconss">
-									</div>
-
-									<div class="col-sm-9 col-9 p-0">
-										@php
-										use App\Models\digital_content;
-										$data = digital_content::join('addclass','addclass.id','digital_contents.class_id')
-											->groupBy('digital_contents.class_id')
-											->select('addclass.*')
-											->get();
-										@endphp
-										<ul class="menus">
-										@if($data)
-            							@foreach ($data as $c)
-											<li><i class="fa fa-caret-right"></i><a href="{{ url('digitalContent') }}/{{$c->id}}">@if($lang == 'en'){{ $c->class_name ?: $c->class_name_bn}}@else {{$c->class_name_bn ?: $c->class_name}}@endif</a></li>
-										@endforeach
-										@endif
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div><!-------------------------End Card----------------------->
-						<div class="col-sm-6 col-12 ">
-							<div class="col-sm-12 col-12 pt-3 pb-2" id="cart" data-aos="fade-in" data-aos-duration="1000" >
 								<p class="session">&nbsp;&nbsp;@lang('frontend.others')</p>
 								<div class="row">
 									<div class="col-sm-3 col-3">
