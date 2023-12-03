@@ -65,7 +65,7 @@
 						<div class="form-group mb-3 col-md-6">
 							<label>@lang('digital_content.subject_name'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
-                                <select class="form-control" name="subject_id" id="subject_id">
+                                <select class="form-control" name="subject_id" id="subject_id" required="">
                                     
                                 </select>
 							</div>

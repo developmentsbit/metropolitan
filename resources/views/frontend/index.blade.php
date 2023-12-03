@@ -748,10 +748,13 @@ li.slideBox {
         <ul class="dropdown-menu pb-3 bg-white" aria-labelledby="navbarDropdownMenuLink" style="min-width: 150px; max-width:100%;">
 
         <div class="col-md-12 col-12 dmenu mt-3">
-            @php
-            use App\Models\class_info;
-            $data = class_info::all()
-            @endphp
+          @php
+          use App\Models\digital_content;
+          $data = digital_content::join('addClass','addClass.id','digital_contents.class_id')
+                  ->groupBy('digital_contents.class_id')
+                  ->select('addClass.*')
+                  ->get();
+          @endphp
             
             @if($data)
             @foreach ($data as $c)
@@ -1047,7 +1050,10 @@ li.slideBox {
   <a href="#"><span uk-icon="icon: chevron-right; ratio: 0.9"></span>&nbsp;&nbsp;@lang('frontend.digital_content')</a>
   <ul class="uk-nav-sub">
     @php
-    $data = class_info::all()
+    $data = digital_content::join('addClass','addClass.id','digital_contents.class_id')
+            ->groupBy('digital_contents.class_id')
+            ->select('addClass.*')
+            ->get();
     @endphp
     
     @if($data)

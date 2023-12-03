@@ -157,8 +157,10 @@ $setting = DB::table("setting")->first();
 											<li><i class="fa fa-caret-right"></i><a href="{{ url('presidentmessage') }}">@lang('frontend.presidentmessage') </a></li>
 											<li><i class="fa fa-caret-right"></i><a href="{{ url('vice_principal_messages') }}">@lang('frontend.vicepresidentmessage') </a></li>
 											<li><i class="fa fa-caret-right"></i><a href="{{ url('principal_message') }}">@lang('frontend.principal_message')</a></li>
-											<li><i class="fa fa-caret-right"></i><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
-											<li><i class="fa fa-caret-right"></i><a href="{{ url('viceprinciples') }}">@lang('frontend.viceprinciples')</a></li>
+											{{--<li><i class="fa fa-caret-right"></i><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
+											<li><i class="fa fa-caret-right"></i><a href="{{ url('viceprinciples') }}">@lang('frontend.viceprinciples')</a></li>--}}
+											<li><i class="fa fa-caret-right"></i><a href="{{ url('exmetropolitanviceprincipal') }}">@lang('frontend.principles')</a></li>
+											<li><i class="fa fa-caret-right"></i><a href="{{ url('exmetropolitanviceprincipal') }}">@lang('frontend.viceprinciples')</a></li>
 											{{-- <li><i class="fa fa-caret-right"></i><a href="{{ url('managing_comitte') }}">@lang('frontend.managing_comitte')</a></li>
 											<li><i class="fa fa-caret-right"></i><a href="{{ url('presidentmessage') }}">@lang('frontend.presidentmessage') </a></li>
 											<li><i class="fa fa-caret-right"></i><a href="{{ url('presidents') }}">@lang('frontend.presidents')</a></li>
@@ -268,10 +270,19 @@ $setting = DB::table("setting")->first();
 									</div>
 
 									<div class="col-sm-9 col-9 p-0">
+										@php
+										use App\Models\digital_content;
+										$data = digital_content::join('addClass','addClass.id','digital_contents.class_id')
+											->groupBy('digital_contents.class_id')
+											->select('addClass.*')
+											->get();
+										@endphp
 										<ul class="menus">
-
-											<li><i class="fa fa-caret-right"></i><a href="{{ url('/photogallery') }}">@lang('frontend.photogallery')</a></li>
-											<li><i class="fa fa-caret-right"></i><a href="{{ url('/videogallery') }}">@lang('frontend.videogallery')</a></li>
+										@if($data)
+            							@foreach ($data as $c)
+											<li><i class="fa fa-caret-right"></i><a href="{{ url('digitalContent') }}/{{$c->id}}">@if($lang == 'en'){{ $c->class_name ?: $c->class_name_bn}}@else {{$c->class_name_bn ?: $c->class_name}}@endif</a></li>
+										@endforeach
+										@endif
 										</ul>
 									</div>
 								</div>
