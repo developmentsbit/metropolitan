@@ -159,8 +159,8 @@ $setting = DB::table("setting")->first();
 											<li><i class="fa fa-caret-right"></i><a href="{{ url('principal_message') }}">@lang('frontend.principal_message')</a></li>
 											{{--<li><i class="fa fa-caret-right"></i><a href="{{ url('principles') }}">@lang('frontend.principles')</a></li>
 											<li><i class="fa fa-caret-right"></i><a href="{{ url('viceprinciples') }}">@lang('frontend.viceprinciples')</a></li>--}}
-											<li><i class="fa fa-caret-right"></i><a href="{{ url('exmetropolitanviceprincipal') }}">@lang('frontend.principles')</a></li>
-											<li><i class="fa fa-caret-right"></i><a href="{{ url('exmetropolitanviceprincipal') }}">@lang('frontend.viceprinciples')</a></li>
+											<li><i class="fa fa-caret-right"></i><a href="{{ url('exmetropolitanprincipal') }}">@lang('frontend.exprinicipal')</a></li>
+											<li><i class="fa fa-caret-right"></i><a href="{{ url('exmetropolitanviceprincipal') }}">@lang('frontend.exviceprinicipal')</a></li>
 											{{-- <li><i class="fa fa-caret-right"></i><a href="{{ url('managing_comitte') }}">@lang('frontend.managing_comitte')</a></li>
 											<li><i class="fa fa-caret-right"></i><a href="{{ url('presidentmessage') }}">@lang('frontend.presidentmessage') </a></li>
 											<li><i class="fa fa-caret-right"></i><a href="{{ url('presidents') }}">@lang('frontend.presidents')</a></li>
