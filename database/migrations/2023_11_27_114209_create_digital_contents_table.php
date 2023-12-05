@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('teacher_name_bn')->nullable();
             $table->longText('details')->nullable();
             $table->longText('details_bn')->nullable();
+            $table->string('url')->nullable();
             $table->integer('status')->default(1)->comment(' 1 = Active & 0 = Inactive');
             $table->string('file',100)->default('0');
             $table->timestamps();

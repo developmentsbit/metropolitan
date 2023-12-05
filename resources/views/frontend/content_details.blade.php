@@ -19,9 +19,6 @@
                                         <th>@lang('frontend.class')</th>
                                         <th>@lang('frontend.group')</th>
                                         <th>@lang('frontend.title')</th>
-                                        <th>@lang('frontend.subject_name')</th>
-                                        <th>@lang('frontend.teacher_name')</th>
-                                        <th>@lang('frontend.detail')</th>
                                         <th>@lang('actions.action')</th>
                                     </tr>
                                 </thead>
@@ -36,11 +33,8 @@
                                         <td>@if($lang == 'en'){{ $d->class_name ?: $d->class_name_bn}}@else {{$d->class_name_bn ?: $d->class_name}}@endif</td>
                                         <td>@if($lang == 'en'){{ $d->group_name ?: $d->group_name_bn}}@else {{$d->group_name_bn ?: $d->group_name}}@endif</td>
                                         <td>@if($lang == 'en'){{ $d->title ?: $d->title_bn}}@else {{$d->title_bn ?: $d->title}}@endif</td>
-                                        <td>@if($lang == 'en'){{ $d->subject_name_en ?: $d->subject_name_bn}}@else {{$d->subject_name_bn ?: $d->subject_name_en}}@endif</td>
-                                        <td>@if($lang == 'en'){{ $d->teacher_name_en ?: $d->teacher_name_bn}}@else {{$d->teacher_name_bn ?: $d->teacher_name_en}}@endif</td>
-                                        <td>@if($lang == 'en'){!! $d->details_en !!}@elseif($lang == 'bn'){!! $d->details_bn !!}@endif</td>
                                         <td>
-                                            <!-- <a href="{{ url('digitalcontentdetails') }}/{{$d->subject_id}}/{{$d->class_id}}" class="btn btn-sm btn-danger" target="_blank"><span uk-icon="icon: file-pdf; ratio: 1"></span>Open</a> -->
+                                            <a href="{{url('digitalcontentdetails')}}/{{$d->subject_id}}/{{$d->class_id}}" class="btn btn-sm btn-danger" target="_blank"><span uk-icon="icon: file-pdf; ratio: 1"></span>Open</a>
                                             <a href="{{ asset('assets/files/digital_content/')}}/{{$d->file}}" class="btn btn-sm btn-danger" download="" ><span uk-icon="icon: download; ratio: 1"></span>Download</a>
                                         </td>
                                     </tr>

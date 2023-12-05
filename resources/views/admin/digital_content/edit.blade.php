@@ -117,13 +117,10 @@
 								<textarea id="summernote1"  class="form-control w-100" rows="10" type="text" name="details_bn" >{{ $data->details_bn }}</textarea>
 							</div>
 						</div>
-						<div class="form-group mb-3 col-md-6">
-							<label>@lang('digital_content.status'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+                        <div class="form-group mb-3 col-md-6">
+							<label>@lang('digital_content.url'):</label>
 							<div class="input-group mt-2">
-                                <select class="form-control" name="status">
-                                    <option @if($data->status == 1) selected @endif value="1">@lang('common.active')</option>
-									<option @if($data->status == 2) selected @endif value="2">@lang('common.inactive')</option>
-								</select>
+								<input class="form-control" type="text" name="url" id="url" value="{{$data->url}}">
 							</div>
 						</div>
                         <div class="form-group mb-3 col-md-6">
@@ -133,6 +130,15 @@
 								<br>
 							</div>
 							<a href="{{ asset('assets/files/digital_content/')}}/{{$data->file}}" download="" class="btn btn-info">@lang('common.downloads')</a>
+						</div>
+						<div class="form-group mb-3 col-md-12">
+							<label>@lang('digital_content.status'): <span class="text-danger" style="font-size: 15px;">*</span></label>
+							<div class="input-group mt-2">
+                                <select class="form-control" name="status">
+                                    <option @if($data->status == 1) selected @endif value="1">@lang('common.active')</option>
+									<option @if($data->status == 2) selected @endif value="2">@lang('common.inactive')</option>
+								</select>
+							</div>
 						</div>
 						<div class="modal-footer border-0">
 							<button type="button" class="btn btn-secondary border-0" onClick="window.location.reload();">@lang('common.close')</button>

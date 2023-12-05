@@ -59,5 +59,6 @@ class DatabaseSeeder extends Seeder
         $this->call(SectionWisesTableSeeder::class);
         $this->call(AboutAdmissionsTableSeeder::class);
         $this->call(AdmissionBannersTableSeeder::class);
+        $this->call(DigitalContentsTableSeeder::class);
     }
 }
