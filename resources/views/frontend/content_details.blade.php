@@ -33,10 +33,17 @@
                                         <td>@if($lang == 'en'){{ $d->class_name ?: $d->class_name_bn}}@else {{$d->class_name_bn ?: $d->class_name}}@endif</td>
                                         <td>@if($lang == 'en'){{ $d->group_name ?: $d->group_name_bn}}@else {{$d->group_name_bn ?: $d->group_name}}@endif</td>
                                         <td>@if($lang == 'en'){{ $d->title ?: $d->title_bn}}@else {{$d->title_bn ?: $d->title}}@endif</td>
+                                        
+                                        @if($d->file)
                                         <td>
                                             <a href="{{url('digitalcontentdetails')}}/{{$d->subject_id}}/{{$d->class_id}}" class="btn btn-sm btn-danger" target="_blank"><span uk-icon="icon: file-pdf; ratio: 1"></span>Open</a>
                                             <a href="{{ asset('assets/files/digital_content/')}}/{{$d->file}}" class="btn btn-sm btn-danger" download="" ><span uk-icon="icon: download; ratio: 1"></span>Download</a>
                                         </td>
+                                        @else
+                                        <td>
+                                            <a href="{{url('digitalcontentdetails')}}/{{$d->subject_id}}/{{$d->class_id}}" class="btn btn-sm btn-danger" target="_blank"><span uk-icon="icon: file-pdf; ratio: 1"></span>Open</a>
+                                        </td>
+                                        @endif
                                     </tr>
                                 @endforeach
                                 @endif
