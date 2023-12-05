@@ -71,6 +71,7 @@ class DigitalContentController extends Controller
             'teacher_name_bn'=>$request->teacher_name_bn,
             'details'=>$request->details,
             'details_bn'=>$request->details_bn,
+            'url'=>$request->url,
             'status'=>$request->status,
         );
 
@@ -152,6 +153,7 @@ class DigitalContentController extends Controller
             'teacher_name_bn'=>$request->teacher_name_bn,
             'details'=>$request->details,
             'details_bn'=>$request->details_bn,
+            'url'=>$request->url,
             'status'=>$request->status,
         ]);
 

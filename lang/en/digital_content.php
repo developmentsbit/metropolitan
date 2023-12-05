@@ -19,4 +19,5 @@ return [
 	'details_bn' => 'Details (Bangla)',
 	'status' => 'Status',
 	'image' => 'File',
+	'url' => 'Slide Show URL',
 ];

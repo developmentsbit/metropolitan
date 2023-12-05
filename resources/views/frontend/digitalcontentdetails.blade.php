@@ -1,5 +1,29 @@
 @extends('frontend.index')
 @section('content')
+    <style>
+    #customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    }
+
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+    #customers tr:hover {background-color: #ddd;}
+
+    #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #05c76a;
+    color: white;
+    }
+    </style>
     <div class="container">
         <div class="col-sm-12 col-12" id="mainpage">
             <div class="row">
@@ -12,19 +36,33 @@
                         </ul>
                         <li class="list-group-item">
                             <div class="table table-responsive">
-                            <!-- <iframe src="{{asset('assets/files/digital_content')}}/{{$data->file}}" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> -->
-                            <a href="{{asset('assets/files/digital_content')}}/{{$data->file}}"><img src="{{asset('assets/files/digital_content')}}/{{$data->file}}" alt="" class="img-fluid" style="width: 400px;height: auto;border: 2px solid #fff;"></a>
-                            <!-- {{asset('assets/files/digital_content')}}/{{$data->file}} -->
-								<!-- <iframe class="margin-top10" src="{{asset('assets/files/digital_content')}}/{{$data->file}}" frameborder="0" width="720" height="434" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">00</iframe> -->
+                                @if($data->url)
+                                <iframe src="{{$data->url}}" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                                @endif
                                 <hr>
-                                <table id="example" class="display table-bordered" style="width:100%">
-                                <tbody>
-                                    <tr style="font-size: 12px;">
-                                        <td>>@if($lang == 'en'){{ $data->title ?: $data->title_bn}}@else {{$data->title_bn ?: $data->title}}@endif</td>
-                                        <td><a >@if($lang == 'en'){{ $data->subject_name_en ?: $data->subject_name_bn}}@else {{$data->subject_name_bn ?: $data->subject_name_en}}@endif</a></td>
+                                <table id="customers">
+                                    <tr>
+                                        <th>@lang('frontend.class')</th>
+                                        <th>@lang('frontend.group')</th>
+                                        <th>@lang('frontend.title')</th>
+                                        <th>@lang('frontend.subject_name')</th>
+                                        <th>@lang('frontend.teacher_name')</th>
+                                        <th>@lang('frontend.detail')</th>
+                                    </tr>
+                                    <tr>
+                                        <td>@if($lang == 'en'){{ $data->class_name ?: $data->class_name_bn}}@else {{$data->class_name_bn ?: $data->class_name}}@endif</td>
+                                        <td>@if($lang == 'en'){{ $data->group_name ?: $data->group_name_bn}}@else {{$data->group_name_bn ?: $data->group_name}}@endif</td>
+                                        <td>@if($lang == 'en'){{ $data->title ?: $data->title_bn}}@else {{$data->title_bn ?: $data->title}}@endif</td>
+                                        <td>@if($lang == 'en'){{ $data->subject_name_en ?: $data->subject_name_bn}}@else {{$data->subject_name_bn ?: $data->subject_name_en}}@endif</td>
                                         <td>@if($lang == 'en'){{ $data->teacher_name_en ?: $data->teacher_name_bn}}@else {{$data->teacher_name_bn ?: $data->teacher_name_en}}@endif</td>
+                                        <td>@if($lang == 'en'){!! $data->details_en !!}@elseif($lang == 'bn'){!! $data->details_bn !!}@endif</td>
                                     </tr>
                                 </table>
+                                @if($data->file)
+                                <div class='embed-responsive' style='padding-bottom:135%; margin-top: 77px;'>
+                                    <object data="{{ asset('assets/files/digital_content/')}}/{{$data->file}}" type='application/pdf' width='100%' height='100%'></object>
+                                </div>
+                                @endif
                             </div>
                         </li>
                     </div>

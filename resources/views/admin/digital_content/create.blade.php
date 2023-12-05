@@ -107,18 +107,24 @@
 							</div>
 						</div>
 						<div class="form-group mb-3 col-md-6">
+							<label>@lang('digital_content.url'): </label>
+							<div class="input-group mt-2">
+								<input class="form-control" type="text" name="url" id="url">
+							</div>
+						</div>
+                        <div class="form-group mb-3 col-md-6">
+							<label>@lang('digital_content.image'): </label>
+							<div class="input-group mt-2">
+								<input class="form-control" type="file" name="file" id="file">
+							</div>
+						</div>
+						<div class="form-group mb-3 col-md-12">
 							<label>@lang('digital_content.status'): <span class="text-danger" style="font-size: 15px;">*</span></label>
 							<div class="input-group mt-2">
 								<select class="form-control" name="status">
 									<option value="1">@lang('common.active')</option>
 									<option value="2">@lang('common.inactive')</option>
 								</select>
-							</div>
-						</div>
-                        <div class="form-group mb-3 col-md-6">
-							<label>@lang('digital_content.image'): <span class="text-danger" style="font-size: 15px;">*</span></label>
-							<div class="input-group mt-2">
-								<input class="form-control" type="file" name="file" id="file" required="">
 							</div>
 						</div>
 						<div class="modal-footer border-0">
